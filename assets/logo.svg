@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 230 175" width="230" height="175">
+  <path fill="#ea4324" d="M34 150 C18 150 8 136 16 124 C3 115 5 90 24 88 C19 60 56 48 75 66 C84 33 142 31 151 64 C168 47 206 56 199 86 C221 89 224 118 203 124 C211 136 199 150 184 150 Z" />
+  <text x="110" y="126" text-anchor="middle"
+        font-family="'Baloo 2','Quicksand',sans-serif" font-weight="800"
+        font-size="64" fill="#ffffff" letter-spacing="-2">hao</text>
+  <text x="110" y="166" text-anchor="middle"
+        font-family="'Noto Sans KR',sans-serif" font-weight="600"
+        font-size="17" fill="#2b2b2b" letter-spacing="3">communication</text>
+</svg>
