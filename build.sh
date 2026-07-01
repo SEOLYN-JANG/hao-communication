@@ -15,7 +15,7 @@ partner_logos() {
 }
 
 # 배포 도메인 (canonical/sitemap/og:url 용) — 실제 배포 주소로 변경하세요
-SITE_URL="https://leegunhee010.github.io/hao-communication"
+SITE_URL="https://seolyn-jang.github.io/hao-communication"
 
 # AI PR Agent(자사 프로그램) 링크 — 배포 시 실제 URL로 교체 (임시: 로컬 파일)
 AI_PR_URL="file:///C:/Users/mycom/AppData/Local/Temp/_AZTMP245_/index.html"
