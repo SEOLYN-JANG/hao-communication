@@ -30,8 +30,17 @@ cat <<EOF
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>$1</title>
 <meta name="description" content="$2" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="하오커뮤니케이션" />
 <meta property="og:title" content="$1" />
 <meta property="og:description" content="$2" />
+<meta property="og:image" content="$SITE_URL/assets/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="$1" />
+<meta name="twitter:description" content="$2" />
+<meta name="twitter:image" content="$SITE_URL/assets/og-image.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Black+Han+Sans&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
