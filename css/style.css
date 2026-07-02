@@ -670,19 +670,20 @@ br.br-pc { display: inline; }
   opacity: 0; vertical-align: middle;
   transition: width 0.6s var(--ease), margin 0.6s var(--ease), opacity 0.45s var(--ease);
 }
-.hao-logo.on { width: 1.87em; margin: 0 0.03em; opacity: 1; }
+.hao-logo.on { width: 1.87em; margin: 0 -0.06em; opacity: 1; }
 .hao-logo-img {
   position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
   width: 1.87em; height: 0.84em; object-fit: contain; display: block;
 }
 
 .hao-sub {
-  position: relative; margin-top: 0.16em; color: rgba(255, 255, 255, 0.92); font-weight: 600;
+  position: absolute; top: 100%; left: 50%; color: rgba(255, 255, 255, 0.92); font-weight: 600;
   font-size: clamp(11px, 1.5vw, 21px); letter-spacing: 0.55em; padding-left: 0.55em;
-  text-align: center; opacity: 0; transform: translateY(10px);
+  text-align: center; white-space: nowrap;
+  opacity: 0; transform: translate(-50%, 10px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
 }
-.story-stage.word-done .hao-sub { opacity: 1; transform: none; }
+.story-stage.word-done .hao-sub { opacity: 1; transform: translate(-50%, 0); }
 
 .hao-final {
   position: absolute; left: 50%; top: 100%; text-align: center;
