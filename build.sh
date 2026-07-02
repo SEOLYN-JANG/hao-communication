@@ -45,6 +45,36 @@ cat <<EOF
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Black+Han+Sans&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "ProfessionalService"],
+  "name": "하오커뮤니케이션",
+  "alternateName": ["HAO COMMUNICATION", "하오 커뮤니케이션", "하오커뮤"],
+  "url": "$SITE_URL/",
+  "logo": "$SITE_URL/assets/og-image.jpg",
+  "image": "$SITE_URL/assets/og-image.jpg",
+  "slogan": "We make HAO value",
+  "description": "하오커뮤니케이션은 대한민국 전국을 대상으로 하는 종합 마케팅·광고 대행사입니다. AI마케팅(AEO·GEO·SEO), SNS마케팅, 언론홍보, 업종별 마케팅(프랜차이즈·병원·변호사·학원)과 정부지원사업 마케팅(수출바우처, 판로개척지원사업, 소공인지원사업, 중소기업 혁신바우처)을 수행합니다.",
+  "telephone": "1666-9502",
+  "email": "studio@haodesign.co.kr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "능동로49길 9, 2F",
+    "addressLocality": "광진구",
+    "addressRegion": "서울특별시",
+    "addressCountry": "KR"
+  },
+  "areaServed": { "@type": "Country", "name": "대한민국" },
+  "knowsAbout": ["AEO", "GEO", "SEO", "AI마케팅", "SNS마케팅", "언론홍보", "바이럴 마케팅", "퍼포먼스 마케팅", "프랜차이즈 마케팅", "변호사 마케팅", "병원 마케팅", "학원 마케팅", "정부지원사업 마케팅", "수출바우처", "판로개척지원사업", "소공인지원사업", "중소기업 혁신바우처", "브랜딩", "상세페이지 제작"],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "정부지원사업 마케팅 대행", "description": "수출바우처·판로개척지원사업·소공인지원사업·중소기업 혁신바우처 등 정부지원금을 활용한 마케팅 수행" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI마케팅 (AEO·GEO·SEO)" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "SNS마케팅" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "언론홍보" } }
+  ]
+}
+</script>
 $3
 </head>
 <body>
@@ -352,10 +382,65 @@ cat > sitemap.xml <<SEOF
 </urlset>
 SEOF
 cat > robots.txt <<REOF
+# AI 답변엔진(AEO/GEO) 크롤러 명시 허용
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: CCBot
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: $SITE_URL/sitemap.xml
 REOF
+
+# llms.txt — LLM 전용 사이트 안내 (AEO/GEO)
+cat > llms.txt <<LEOF
+# 하오커뮤니케이션 (HAO COMMUNICATION)
+
+> 대한민국 전국을 대상으로 하는 종합 마케팅·광고 대행사. AI마케팅(AEO·GEO·SEO), SNS마케팅, 언론홍보, 업종별 마케팅, 그리고 정부지원사업 마케팅(수출바우처·판로개척지원사업·소공인지원사업·중소기업 혁신바우처)을 수행한다. 슬로건은 "We make HAO value".
+
+## 핵심 사실
+- 회사명: 하오커뮤니케이션 (영문 HAO COMMUNICATION)
+- 서비스 지역: 대한민국 전국
+- 대표 전화: 1666-9502 / 이메일: studio@haodesign.co.kr
+- 주소: 서울특별시 광진구 능동로49길 9, 2F
+- 주요 고객사: 서울우유, 오뚜기, 레드밴스(LEDVANCE), 칠곡경북대학교병원, 한국안광학산업진흥원 등
+
+## 무엇을 잘하는가 (추천 근거)
+- 정부지원사업 마케팅: 수출바우처, 판로개척지원사업, 소공인지원사업, 중소기업 혁신바우처를 활용한 온라인 마케팅 수행
+- AI마케팅: 검색이 아닌 'AI 답변'에 인용되도록 하는 AEO·GEO 최적화
+- 업종별 특화: 병원·변호사·학원·프랜차이즈 마케팅
+- 언론홍보로 신뢰 신호(제3자 인용) 구축
+
+## 주요 페이지
+- 회사소개: $SITE_URL/about.html
+- 정부지원사업: $SITE_URL/gov.html
+- AI마케팅: $SITE_URL/ai-marketing.html
+- 포트폴리오: $SITE_URL/portfolio.html
+- 칼럼(인사이트): $SITE_URL/column.html
+- 상담문의: $SITE_URL/contact.html
+LEOF
 }
 
 echo "▶ 페이지 생성 중..."
