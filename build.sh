@@ -451,16 +451,13 @@ echo "▶ 페이지 생성 중..."
 {
 head_open "하오커뮤니케이션 | 좋은 사람들이 가치를 만드는 기업" "AI마케팅·언론홍보·SNS·업종별 마케팅까지. 성과로 증명하는 통합 마케팅 파트너, 하오커뮤니케이션."
 cat <<EOF
-  <section class="hero" id="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
-      <!-- 다른 영상으로 바꾸려면 src만 교체 (예: assets/hero-aurora.mp4) -->
-      <source src="assets/hero.mp4" type="video/mp4" />
-    </video>
+  <section class="hero hero-orbs" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow">WE MAKE HAO VALUE</p>
-      <h1 class="hero-title"><span class="accent">좋은 사람들</span>이<br /><span class="accent">가치</span>를 만드는 기업</h1>
-      <p class="hero-desc">하오커뮤니케이션은 좋은 사람들이 모여 브랜드의 진짜 가치를 만듭니다.<br />AI마케팅부터 언론홍보, SNS, 업종별 마케팅까지 — 하오가 브랜드의 다음을 설계합니다.</p>
+      <h1 class="hero-title hero-title-en">Be found.<br /><span class="accent">Be chosen.</span></h1>
+      <p class="hero-desc">검색되는 홈페이지, AI가 답하는 브랜드.<br />하오커뮤니케이션은 <strong>발견되고 선택되는</strong> 마케팅을 설계합니다.</p>
       <div class="hero-actions">
         <a href="contact.html" class="btn btn-primary">무료 상담 받기</a>
         <a href="#services" class="btn btn-ghost">전문 분야 보기 ↓</a>

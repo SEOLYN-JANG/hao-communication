@@ -7,102 +7,119 @@
 (function () {
   "use strict";
 
-  /* ---------- 1. HERO CANVAS (영상처럼 움직이는 배경) ---------- */
+  /* ---------- 1. HERO CANVAS (광택 3D 오브가 떠다니는 히어로) ---------- */
   const canvas = document.getElementById("heroCanvas");
   if (canvas) {
     const ctx = canvas.getContext("2d");
-    let w, h, dpr, particles, blobs;
-    const ORANGE = [234, 67, 36];
+    let w, h, dpr, orbs;
+    let mx = 0, my = 0, tmx = 0, tmy = 0; // 마우스 패럴랙스
+
+    // 광택 구(球) 색상 세트: [하이라이트, 본색, 그림자]
+    const PALETTE = [
+      [[255, 158, 120], [234, 67, 36], [120, 24, 8]],   // 오렌지
+      [[255, 190, 150], [255, 122, 69], [150, 52, 18]],  // 코랄
+      [[255, 255, 255], [238, 238, 242], [140, 140, 152]], // 화이트
+      [[96, 96, 108], [26, 26, 32], [4, 4, 8]],          // 블랙
+    ];
+
+    function rand(a, b) { return a + Math.random() * (b - a); }
+    function rgba(c, a) { return "rgba(" + c[0] + "," + c[1] + "," + c[2] + "," + a + ")"; }
 
     function resize() {
       dpr = Math.min(window.devicePixelRatio || 1, 2);
-      w = canvas.clientWidth;
-      h = canvas.clientHeight;
-      canvas.width = w * dpr;
-      canvas.height = h * dpr;
+      w = canvas.clientWidth; h = canvas.clientHeight;
+      canvas.width = w * dpr; canvas.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       init();
     }
 
-    function rand(a, b) { return a + Math.random() * (b - a); }
-
     function init() {
-      // 큰 빛 덩어리 (영상 같은 흐름)
-      blobs = [];
-      for (let i = 0; i < 4; i++) {
-        blobs.push({
-          x: rand(0, w), y: rand(0, h),
-          r: rand(180, 360),
-          vx: rand(-0.25, 0.25), vy: rand(-0.25, 0.25),
-          hue: i % 2 === 0 ? ORANGE : [255, 150, 70],
-        });
-      }
-      // 떠다니는 입자
-      const count = Math.min(90, Math.floor(w / 14));
-      particles = [];
+      const count = Math.max(9, Math.min(18, Math.floor(w / 110)));
+      orbs = [];
       for (let i = 0; i < count; i++) {
-        particles.push({
+        const depth = rand(0.4, 1); // 원근감 (클수록 앞·큰·빠름)
+        orbs.push({
           x: rand(0, w), y: rand(0, h),
-          r: rand(0.6, 2.4),
-          vx: rand(-0.35, 0.35), vy: rand(-0.35, 0.35),
-          a: rand(0.15, 0.7),
+          r: rand(16, 92) * depth,
+          depth: depth,
+          vx: rand(-0.18, 0.18) * depth,
+          vy: rand(-0.14, 0.14) * depth,
+          bob: rand(0, Math.PI * 2),
+          bobSpeed: rand(0.4, 0.9),
+          color: PALETTE[(Math.random() * PALETTE.length) | 0],
         });
       }
+      // 앞쪽(큰) 오브가 뒤에 그려지도록 정렬 → 겹침 자연스럽게
+      orbs.sort(function (a, b) { return a.depth - b.depth; });
     }
 
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      // 배경 베이스 (스토리 섹션과 동일한 순수 검정 → 이음새 제거)
-      ctx.fillStyle = "#000";
+    function drawOrb(o, t) {
+      const px = (tmx * 26) * o.depth;
+      const py = (tmy * 20) * o.depth + Math.sin(t * o.bobSpeed + o.bob) * 6 * o.depth;
+      const x = o.x + px, y = o.y + py, r = o.r;
+      const hx = x - r * 0.34, hy = y - r * 0.38; // 하이라이트 위치(좌상단)
+
+      // 바닥 그림자
+      ctx.save();
+      ctx.shadowColor = "rgba(0,0,0,0.5)";
+      ctx.shadowBlur = r * 0.55;
+      ctx.shadowOffsetY = r * 0.28;
+      const base = ctx.createRadialGradient(hx, hy, r * 0.04, x, y, r * 1.05);
+      base.addColorStop(0, rgba(o.color[0], 1));
+      base.addColorStop(0.4, rgba(o.color[1], 1));
+      base.addColorStop(1, rgba(o.color[2], 1));
+      ctx.fillStyle = base;
+      ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+      ctx.restore();
+
+      // 림 라이트(하단 가장자리 살짝 반사)
+      const rim = ctx.createRadialGradient(x, y + r * 0.5, r * 0.2, x, y, r);
+      rim.addColorStop(0, "rgba(255,255,255,0)");
+      rim.addColorStop(0.82, "rgba(255,255,255,0)");
+      rim.addColorStop(1, rgba(o.color[0], 0.18));
+      ctx.fillStyle = rim;
+      ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+
+      // 스페큘러 하이라이트(반짝)
+      const spec = ctx.createRadialGradient(hx, hy, 0, hx, hy, r * 0.42);
+      spec.addColorStop(0, "rgba(255,255,255,0.9)");
+      spec.addColorStop(0.5, "rgba(255,255,255,0.18)");
+      spec.addColorStop(1, "rgba(255,255,255,0)");
+      ctx.fillStyle = spec;
+      ctx.beginPath(); ctx.arc(hx, hy, r * 0.42, 0, Math.PI * 2); ctx.fill();
+    }
+
+    function draw(now) {
+      const t = now / 1000;
+      // 배경: 다크 네이비
+      const bg = ctx.createLinearGradient(0, 0, 0, h);
+      bg.addColorStop(0, "#12182a");
+      bg.addColorStop(1, "#0a0e18");
+      ctx.fillStyle = bg;
       ctx.fillRect(0, 0, w, h);
 
-      // 빛 덩어리
-      blobs.forEach((b) => {
-        b.x += b.vx; b.y += b.vy;
-        if (b.x < -b.r) b.x = w + b.r; if (b.x > w + b.r) b.x = -b.r;
-        if (b.y < -b.r) b.y = h + b.r; if (b.y > h + b.r) b.y = -b.r;
-        const g = ctx.createRadialGradient(b.x, b.y, 0, b.x, b.y, b.r);
-        g.addColorStop(0, `rgba(${b.hue[0]},${b.hue[1]},${b.hue[2]},0.30)`);
-        g.addColorStop(1, "rgba(255,106,0,0)");
-        ctx.fillStyle = g;
-        ctx.beginPath();
-        ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
-        ctx.fill();
-      });
+      // 마우스 패럴랙스 부드럽게 추종
+      tmx += (mx - tmx) * 0.04;
+      tmy += (my - tmy) * 0.04;
 
-      // 입자 + 연결선
-      ctx.globalCompositeOperation = "lighter";
-      particles.forEach((p, i) => {
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0 || p.x > w) p.vx *= -1;
-        if (p.y < 0 || p.y > h) p.vy *= -1;
-        ctx.beginPath();
-        ctx.fillStyle = `rgba(255,160,90,${p.a})`;
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fill();
-
-        for (let j = i + 1; j < particles.length; j++) {
-          const q = particles[j];
-          const dx = p.x - q.x, dy = p.y - q.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
-            ctx.strokeStyle = `rgba(234,67,36,${0.14 * (1 - dist / 120)})`;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(p.x, p.y);
-            ctx.lineTo(q.x, q.y);
-            ctx.stroke();
-          }
-        }
+      orbs.forEach(function (o) {
+        o.x += o.vx; o.y += o.vy;
+        const m = o.r + 40;
+        if (o.x < -m) o.x = w + m; if (o.x > w + m) o.x = -m;
+        if (o.y < -m) o.y = h + m; if (o.y > h + m) o.y = -m;
+        drawOrb(o, t);
       });
-      ctx.globalCompositeOperation = "source-over";
 
       requestAnimationFrame(draw);
     }
 
     window.addEventListener("resize", resize);
+    window.addEventListener("mousemove", function (e) {
+      mx = (e.clientX / window.innerWidth - 0.5) * 2;
+      my = (e.clientY / window.innerHeight - 0.5) * 2;
+    });
     resize();
-    draw();
+    requestAnimationFrame(draw);
   }
 
   /* ---------- 2. HEADER scroll state ---------- */
