@@ -1056,6 +1056,30 @@ br.br-pc { display: inline; }
 .loc-list em { font-style: normal; font-size: 16px; line-height: 1.5; color: rgba(255,255,255,.9); }
 .loc-btn { margin-top: auto; align-self: flex-start; }
 
+/* AEO FAQ 아코디언 */
+.aeo-faq-wrap { max-width: 860px; }
+.aeo-faq { margin-top: 40px; display: grid; gap: 14px; }
+.aeo-faq details {
+  border: 1px solid var(--line); border-radius: 14px; background: #fff;
+  padding: 0 24px; transition: border-color .2s var(--ease), box-shadow .2s var(--ease);
+}
+.aeo-faq details[open] { border-color: var(--orange); box-shadow: 0 14px 34px -22px rgba(234,67,36,.5); }
+.aeo-faq summary {
+  list-style: none; cursor: pointer; padding: 22px 0;
+  font-size: 17px; font-weight: 700; letter-spacing: -.4px; color: var(--ink);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+}
+.aeo-faq summary::-webkit-details-marker { display: none; }
+.aeo-faq summary::after {
+  content: "+"; font-size: 24px; font-weight: 400; color: var(--orange);
+  flex: 0 0 auto; transition: transform .25s var(--ease);
+}
+.aeo-faq details[open] summary::after { transform: rotate(45deg); }
+.aeo-faq details p {
+  margin: 0; padding: 0 0 24px; font-size: 15.5px; line-height: 1.75; color: var(--gray);
+}
+.aeo-faq details strong { color: var(--ink); font-weight: 800; }
+
 @media (max-width: 900px) {
   .ac-pain-grid, .ac-stat-grid, .ac-proc-grid, .ac-target-grid { grid-template-columns: repeat(2, 1fr); }
   .ac-svc-grid { grid-template-columns: 1fr; }
