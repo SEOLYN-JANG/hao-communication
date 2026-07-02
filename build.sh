@@ -708,16 +708,57 @@ cat <<'EOF'
   </section>
 
   <!-- MARKET SHIFT -->
-  <section class="section ac-stats">
+  <section class="section">
     <div class="container">
-      <div class="section-head center"><span class="tag">MARKET SHIFT</span><h2 class="section-title">검색의 시대는 저물고,<br /><span class="accent">AI 답변의 시대</span>가 열렸습니다</h2><p class="section-sub">사람들은 더 이상 열 개의 파란 링크를 보지 않습니다. AI가 정리한 하나의 답변을 봅니다.</p></div>
-      <div class="ac-stat-grid">
-        <div class="ac-stat"><div class="ac-stat-num"><span data-count="39">0</span><i>%↓</i></div><p>2026년까지 전통 검색<br />사용량 감소 전망</p></div>
-        <div class="ac-stat"><div class="ac-stat-num"><span data-count="3.2">0</span><i>배</i></div><p>일반 검색 대비<br />AI 추천의 구매 전환율</p></div>
-        <div class="ac-stat"><div class="ac-stat-num"><span data-count="70">0</span><i>%+</i></div><p>AI에게 궁금한 걸<br />물어본 적 있는 사용자</p></div>
-        <div class="ac-stat"><div class="ac-stat-num"><span data-count="4">0</span><i>대</i></div><p>하오가 함께 관리하는<br />AI 답변엔진</p></div>
+      <div class="section-head center"><span class="tag">MARKET SHIFT</span><h2 class="section-title">검색의 시대는 저물고,<br /><span class="accent">AI 답변의 시대</span>가 열렸습니다</h2><p class="section-sub">Gartner는 2026년까지 전통 검색이 39% 감소할 것이라 전망합니다. 골든크로스는 2025년에 일어났습니다.</p></div>
+      <div class="mshift-grid">
+        <div class="mshift-chart">
+          <div class="mshift-chart-top">
+            <div><h3>검색 vs AI 답변 사용 비중 추이</h3><span class="mshift-sub">2022 — 2027 · GARTNER / STATISTA</span></div>
+            <div class="mshift-legend"><span class="lg lg-a">전통 검색</span><span class="lg lg-b">AI 답변</span></div>
+          </div>
+          <svg viewBox="0 0 640 360" class="mshift-svg" role="img" aria-label="검색 대비 AI 답변 사용 비중이 2025년 골든크로스를 지나 역전되는 추이 그래프">
+            <defs>
+              <linearGradient id="aiFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#ea4324" stop-opacity="0.35" />
+                <stop offset="100%" stop-color="#ea4324" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+            <!-- grid -->
+            <g stroke="#2a2a30" stroke-width="1">
+              <line x1="60" y1="40" x2="600" y2="40" />
+              <line x1="60" y1="133.3" x2="600" y2="133.3" />
+              <line x1="60" y1="226.7" x2="600" y2="226.7" />
+              <line x1="60" y1="320" x2="600" y2="320" />
+            </g>
+            <!-- y labels -->
+            <g fill="#6b6b73" font-size="12" text-anchor="end">
+              <text x="46" y="44">100</text><text x="46" y="137">075</text><text x="46" y="231">050</text><text x="46" y="324">025</text>
+            </g>
+            <!-- golden cross vertical -->
+            <line x1="384" y1="40" x2="384" y2="320" stroke="#ea4324" stroke-width="1.2" stroke-dasharray="5 5" opacity="0.55" />
+            <text x="384" y="30" fill="#ea4324" font-size="13" font-weight="800" text-anchor="middle">★ GOLDEN CROSS</text>
+            <!-- AI area -->
+            <polygon points="60,249.1 168,222.9 276,178.1 384,133.3 492,92.3 600,54.9 600,320 60,320" fill="url(#aiFill)" />
+            <!-- 전통 검색 line -->
+            <polyline points="60,54.9 168,69.9 276,96 384,133.3 492,196.8 600,237.9" fill="none" stroke="#6b6b73" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- AI 답변 line -->
+            <polyline points="60,249.1 168,222.9 276,178.1 384,133.3 492,92.3 600,54.9" fill="none" stroke="#ea4324" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+            <!-- cross dot -->
+            <circle cx="384" cy="133.3" r="8" fill="#ea4324" stroke="#fff" stroke-width="2.5" />
+            <!-- x labels -->
+            <g fill="#8a8a92" font-size="12.5" text-anchor="middle">
+              <text x="60" y="342">2022</text><text x="168" y="342">2023</text><text x="276" y="342">2024</text>
+              <text x="384" y="342" fill="#ea4324" font-weight="800">2025</text><text x="492" y="342">2026</text><text x="600" y="342">2027</text>
+            </g>
+          </svg>
+        </div>
+        <div class="mshift-stats">
+          <div class="mshift-stat"><div class="mshift-n"><i>−</i><span data-count="39">0</span><i>%</i></div><p>2026년까지 전통 검색 사용량 감소 전망</p><span class="mshift-src">GARTNER 2024</span></div>
+          <div class="mshift-stat"><div class="mshift-n"><span data-count="3.2">0</span><i>배</i></div><p>AI 추천 vs 일반 검색 구매 전환율 차이</p><span class="mshift-src">PRINCETON GEO 2023</span></div>
+          <div class="mshift-stat"><div class="mshift-n"><span data-count="70">0</span><i>%↑</i></div><p>AI에게 질문해본 적 있는 인터넷 사용자</p><span class="mshift-src">SALESFORCE 2024</span></div>
+        </div>
       </div>
-      <p class="trust-note" style="margin-top:30px;font-size:13px;">※ 출처: Gartner(2024), Princeton GEO(2023), Salesforce(2024) · 4대 엔진: ChatGPT · Gemini · Claude · Perplexity</p>
     </div>
   </section>
 
