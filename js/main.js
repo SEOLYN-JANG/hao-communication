@@ -178,6 +178,7 @@
       let p = (window.scrollY - story.offsetTop) / (total || 1);
       p = Math.min(Math.max(p, 0), 0.9999);
       const stop = Math.floor(p * STOPS); // 0..items.length
+      stage.classList.toggle("lit", p > 0.004);
       items.forEach((el, i) => el.classList.toggle("on", i <= stop));
       stage.classList.toggle("word-done", stop >= items.length - 1);
       stage.classList.toggle("show-final", stop >= items.length);

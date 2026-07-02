@@ -613,14 +613,14 @@ br.br-pc { display: inline; }
 /* ============================================================
    STORY — 스크롤 전환 섹션 (goldenax 스타일)
    ============================================================ */
-.story { position: relative; height: 380vh; background: #000; }
+.story { position: relative; height: 220vh; background: #05060a; }
 .story-stage {
-  position: sticky; top: 0; height: 100vh; overflow: hidden; background: #000;
+  position: sticky; top: 0; height: 100vh; overflow: hidden; background: #05060a;
   display: flex; align-items: center; justify-content: center;
 }
-.story-bg { position: absolute; inset: 0; background: #000; }
+.story-bg { position: absolute; inset: 0; background: radial-gradient(120% 90% at 50% 45%, #10131f 0%, #05060a 70%); }
 .story-stars {
-  position: absolute; inset: 0; opacity: 0.4;
+  position: absolute; inset: 0; opacity: 0.5;
   background-image:
     radial-gradient(1.5px 1.5px at 20px 30px, rgba(255,255,255,0.5), transparent),
     radial-gradient(1px 1px at 120px 90px, rgba(255,255,255,0.3), transparent),
@@ -628,39 +628,59 @@ br.br-pc { display: inline; }
     radial-gradient(1px 1px at 300px 50px, rgba(255,255,255,0.28), transparent),
     radial-gradient(1px 1px at 260px 220px, rgba(255,255,255,0.34), transparent);
   background-size: 340px 250px; animation: starDrift 70s linear infinite;
+  -webkit-mask-image: radial-gradient(90% 70% at 50% 45%, #000 30%, transparent 75%);
+          mask-image: radial-gradient(90% 70% at 50% 45%, #000 30%, transparent 75%);
 }
-.story-glow { display: none; }
+/* 구름 뒤 오렌지 글로우 */
+.story-glow {
+  display: block; position: absolute; left: 50%; top: 46%;
+  width: 68vw; height: 68vw; max-width: 880px; max-height: 880px;
+  transform: translate(-50%, -50%); pointer-events: none;
+  background: radial-gradient(circle, rgba(234,67,36,0.22), rgba(234,67,36,0) 62%);
+  opacity: 0; transition: opacity 1s var(--ease);
+  animation: storyGlow 8s ease-in-out infinite;
+}
+.story-stage.lit .story-glow { opacity: 1; }
 @keyframes starDrift { from { background-position: 0 0; } to { background-position: 340px 250px; } }
-@keyframes storyGlow { 0%,100% { transform: translateX(-4%) scale(1); opacity: 0.7; } 50% { transform: translateX(6%) scale(1.12); opacity: 1; } }
+@keyframes storyGlow { 0%,100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-50%,-50%) scale(1.14); } }
 
 /* HAO 글자 빌드업 */
 .story-col { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.hao-eyebrow {
+  color: var(--orange-light); font-weight: 700; letter-spacing: 0.5em;
+  font-size: clamp(10px, 1.3vw, 14px); margin-bottom: 1.2em; padding-left: 0.5em;
+  opacity: 0; transform: translateY(-10px);
+  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+}
+.story-stage.lit .hao-eyebrow { opacity: 1; transform: none; }
 .hao-word {
   display: flex; align-items: center; justify-content: center;
   font-family: "Arial Black", "Noto Sans KR", sans-serif; font-weight: 900;
   font-size: clamp(60px, 15vw, 190px); line-height: 1; color: #fff; letter-spacing: -0.03em;
 }
 .hao-char {
-  display: inline-block; opacity: 0; transform: translateY(0.22em) scale(0.7);
-  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+  display: inline-block; opacity: 0; transform: translateY(0.3em) scale(0.82);
+  filter: blur(12px);
+  transition: opacity 0.55s var(--ease), transform 0.75s var(--ease), filter 0.55s var(--ease);
 }
-.hao-char.on { opacity: 1; transform: none; }
+.hao-char.on { opacity: 1; transform: none; filter: none; }
 
 /* 실제 logo.png의 모양(알파)을 마스크로 떠서 단색 구름으로 꽉 채움 — 내부 텍스트 없음, 확대해도 또렷 */
 .hao-logo {
   display: inline-block; position: relative; height: 0.84em; width: 0; overflow: hidden;
   opacity: 0; vertical-align: middle;
-  transition: width 0.55s var(--ease), margin 0.55s var(--ease), opacity 0.4s var(--ease);
+  transition: width 0.6s var(--ease), margin 0.6s var(--ease), opacity 0.45s var(--ease);
 }
 .hao-logo.on { width: 1.9em; margin: 0 0.05em; opacity: 1; }
 .hao-logo-img {
   position: absolute; left: 50%; top: 0; transform: translateX(-50%);
   width: 1.9em; height: 0.84em;
   background: url("../assets/cloud.png") no-repeat center; background-size: contain;
+  filter: drop-shadow(0 0 30px rgba(234,67,36,0.55));
 }
 
 .hao-sub {
-  position: relative; margin-top: 0.06em; color: rgba(255, 255, 255, 0.9); font-weight: 600;
+  position: relative; margin-top: 0.16em; color: rgba(255, 255, 255, 0.92); font-weight: 600;
   font-size: clamp(11px, 1.5vw, 21px); letter-spacing: 0.55em; padding-left: 0.55em;
   text-align: center; opacity: 0; transform: translateY(10px);
   transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
@@ -672,10 +692,16 @@ br.br-pc { display: inline; }
   opacity: 0; transform: translate(-50%, 16px);
   transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); pointer-events: none;
 }
+.hao-final-line {
+  display: block; width: 0; height: 2px; margin: 0 auto 18px;
+  background: var(--orange); transition: width 0.7s var(--ease) 0.15s;
+}
+.story-stage.show-final .hao-final-line { width: 56px; }
 .hao-final p {
   color: #fff; font-weight: 700; font-size: clamp(15px, 1.9vw, 24px); line-height: 1.55;
   letter-spacing: -0.5px; white-space: nowrap; margin: 0;
 }
+.hao-final p .accent { color: var(--orange); }
 .story-stage.show-final .hao-final { opacity: 1; transform: translate(-50%, 0); }
 
 /* ============================================================
