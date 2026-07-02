@@ -672,9 +672,8 @@ br.br-pc { display: inline; }
 }
 .hao-logo.on { width: 1.9em; margin: 0 -0.14em 0 0.02em; opacity: 1; }
 .hao-logo-img {
-  position: absolute; left: 50%; top: 0; transform: translateX(-50%);
-  width: 1.9em; height: 0.84em;
-  background: url("../assets/cloud.png") no-repeat center; background-size: contain;
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 1.9em; height: 0.84em; object-fit: contain; display: block;
 }
 
 .hao-sub {

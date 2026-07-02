@@ -161,15 +161,9 @@
     const STOPS = items.length + 1; // 글자 빌드 + 마지막 문구
     const sub = document.getElementById("haoSub");
     function layoutCaption() {
-      if (!col || !logo) return;
-      const colR = col.getBoundingClientRect();
-      const logoR = logo.getBoundingClientRect();
-      const cloudCx = logoR.left + logoR.width / 2 - colR.left; // 구름 중심 (col 기준)
-      if (finalEl) {
-        finalEl.style.left = cloudCx + "px";
-        finalEl.style.top = (colR.height + 22) + "px";
-      }
-      if (sub) sub.style.left = (cloudCx - colR.width / 2) + "px"; // 구름 밑으로 이동
+      // 문구는 단어 전체 기준 중앙정렬(CSS) — 마지막 문구 위치만 단어 아래로
+      if (!col || !finalEl) return;
+      finalEl.style.top = (col.getBoundingClientRect().height + 20) + "px";
     }
     let sTicking = false;
     function storyUpdate() {
