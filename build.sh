@@ -572,6 +572,34 @@ cat <<'EOF'
       </div>
     </div>
   </section>
+
+  <!-- 오시는 길 -->
+  <section class="section loc-sec">
+    <div class="container">
+      <div class="section-head center">
+        <span class="tag">LOCATION</span>
+        <h2 class="section-title">오시는 <span class="accent">길</span></h2>
+      </div>
+      <div class="loc-grid">
+        <div class="loc-map">
+          <iframe
+            src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C49%EA%B8%B8%209&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            title="하오커뮤니케이션 오시는 길" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+        <aside class="loc-info">
+          <h3>하오커뮤니케이션</h3>
+          <ul class="loc-list">
+            <li><span>ADDRESS</span><em>서울시 광진구 능동로49길 9, 2F</em></li>
+            <li><span>TEL</span><em>1666-9502</em></li>
+            <li><span>MAIL</span><em>studio@haodesign.co.kr</em></li>
+            <li><span>TIME</span><em>평일 09:00 – 18:00</em></li>
+          </ul>
+          <a class="btn btn-primary loc-btn" href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EA%B4%91%EC%A7%84%EA%B5%AC%20%EB%8A%A5%EB%8F%99%EB%A1%9C49%EA%B8%B8%209" target="_blank" rel="noopener">네이버 지도로 길찾기</a>
+        </aside>
+      </div>
+    </div>
+  </section>
 EOF
 cta_band
 footer_close
