@@ -631,16 +631,7 @@ br.br-pc { display: inline; }
   -webkit-mask-image: radial-gradient(90% 70% at 50% 45%, #000 30%, transparent 75%);
           mask-image: radial-gradient(90% 70% at 50% 45%, #000 30%, transparent 75%);
 }
-/* 구름 뒤 오렌지 글로우 */
-.story-glow {
-  display: block; position: absolute; left: 50%; top: 46%;
-  width: 68vw; height: 68vw; max-width: 880px; max-height: 880px;
-  transform: translate(-50%, -50%); pointer-events: none;
-  background: radial-gradient(circle, rgba(234,67,36,0.22), rgba(234,67,36,0) 62%);
-  opacity: 0; transition: opacity 1s var(--ease);
-  animation: storyGlow 8s ease-in-out infinite;
-}
-.story-stage.lit .story-glow { opacity: 1; }
+.story-glow { display: none; }
 @keyframes starDrift { from { background-position: 0 0; } to { background-position: 340px 250px; } }
 @keyframes storyGlow { 0%,100% { transform: translate(-50%,-50%) scale(1); } 50% { transform: translate(-50%,-50%) scale(1.14); } }
 
@@ -676,7 +667,6 @@ br.br-pc { display: inline; }
   position: absolute; left: 50%; top: 0; transform: translateX(-50%);
   width: 1.9em; height: 0.84em;
   background: url("../assets/cloud.png") no-repeat center; background-size: contain;
-  filter: drop-shadow(0 0 30px rgba(234,67,36,0.55));
 }
 
 .hao-sub {
