@@ -1080,6 +1080,33 @@ br.br-pc { display: inline; }
 }
 .aeo-faq details strong { color: var(--ink); font-weight: 800; }
 
+/* AI 출처 신뢰 위계 (AEO/GEO · 언론홍보 공용) */
+.trust-tiers { max-width: 780px; margin: 44px auto 0; display: grid; gap: 14px; }
+.trust-tier {
+  display: flex; align-items: center; gap: 20px;
+  padding: 24px 28px; border-radius: 16px;
+  border: 1px solid var(--line); background: #fff;
+}
+.trust-tier--top { background: var(--ink); color: #fff; border-color: var(--ink); box-shadow: 0 20px 44px -24px rgba(14,14,18,.5); }
+.trust-tier--mid { opacity: .92; }
+.trust-tier--low { opacity: .72; }
+.trust-rank {
+  flex: 0 0 auto; font-size: 12px; font-weight: 800; letter-spacing: 1px;
+  padding: 7px 13px; border-radius: 50px; background: #eee; color: var(--ink);
+}
+.trust-tier--top .trust-rank { background: var(--orange); color: #fff; }
+.trust-body h4 { margin: 0 0 4px; font-size: 18px; font-weight: 800; letter-spacing: -.4px; }
+.trust-body p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--gray); }
+.trust-tier--top .trust-body p { color: rgba(255,255,255,.72); }
+.trust-note { text-align: center; margin-top: 26px; font-size: 15.5px; line-height: 1.7; color: var(--gray); }
+.trust-note a { color: var(--orange); font-weight: 800; }
+
+/* 무료 진단 리포트 체크리스트 */
+.report-check { list-style: none; margin: 30px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 780px; margin-left: auto; margin-right: auto; }
+.report-check li { position: relative; padding: 16px 18px 16px 46px; border: 1px solid var(--line); border-radius: 12px; background: #fff; font-size: 15px; font-weight: 600; }
+.report-check li::before { content: "✓"; position: absolute; left: 18px; top: 15px; color: var(--orange); font-weight: 900; }
+@media (max-width: 620px) { .report-check { grid-template-columns: 1fr; } .trust-tier { flex-direction: column; align-items: flex-start; gap: 10px; } }
+
 @media (max-width: 900px) {
   .ac-pain-grid, .ac-stat-grid, .ac-proc-grid, .ac-target-grid { grid-template-columns: repeat(2, 1fr); }
   .ac-svc-grid { grid-template-columns: 1fr; }

@@ -707,36 +707,53 @@ cat <<'EOF'
     </div>
   </section>
 
-  <section class="section why">
+  <!-- MARKET SHIFT -->
+  <section class="section ac-stats">
     <div class="container">
-      <div class="section-head center"><span class="tag">WHY NOW</span><h2 class="section-title">왜 지금 <span class="accent">AI마케팅</span>인가</h2></div>
-      <div class="why-grid">
-        <div class="why-card"><span class="why-num">01</span><h3>AI가 구매의 시작점</h3><p>많은 소비자가 이제 검색창이 아니라<br class="br-pc" />AI에게 제품·서비스 추천을 먼저 요청합니다.</p></div>
-        <div class="why-card"><span class="why-num">02</span><h3>더 높은 전환</h3><p>AI 답변에서 유입된 트래픽은 구매 의도가 뚜렷해, 일반 검색보다 전환이 높습니다.</p></div>
-        <div class="why-card"><span class="why-num">03</span><h3>선점이 곧 경쟁력</h3><p>AEO·GEO는 아직 경쟁이 낮아,<br class="br-pc" />먼저 자리 잡는 브랜드가 다음 10년을 선도합니다.</p></div>
+      <div class="section-head center"><span class="tag">MARKET SHIFT</span><h2 class="section-title">검색의 시대는 저물고,<br /><span class="accent">AI 답변의 시대</span>가 열렸습니다</h2><p class="section-sub">사람들은 더 이상 열 개의 파란 링크를 보지 않습니다. AI가 정리한 하나의 답변을 봅니다.</p></div>
+      <div class="ac-stat-grid">
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="39">0</span><i>%↓</i></div><p>2026년까지 전통 검색<br />사용량 감소 전망</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="3.2">0</span><i>배</i></div><p>일반 검색 대비<br />AI 추천의 구매 전환율</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="70">0</span><i>%+</i></div><p>AI에게 궁금한 걸<br />물어본 적 있는 사용자</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="4">0</span><i>대</i></div><p>하오가 함께 관리하는<br />AI 답변엔진</p></div>
       </div>
+      <p class="trust-note" style="margin-top:30px;font-size:13px;">※ 출처: Gartner(2024), Princeton GEO(2023), Salesforce(2024) · 4대 엔진: ChatGPT · Gemini · Claude · Perplexity</p>
     </div>
   </section>
 
-  <section class="section vch-process alt-bg" id="process">
+  <!-- AI 신뢰 위계 → 언론홍보 연결 -->
+  <section class="section alt-bg">
     <div class="container">
-      <div class="section-head center"><span class="tag">PROCESS</span><h2 class="section-title">하오의 <span class="accent">AI 최적화</span> 프로세스</h2></div>
+      <div class="section-head center"><span class="tag">HOW AI TRUSTS</span><h2 class="section-title">AI는 아무나 <span class="accent">인용하지 않습니다</span></h2><p class="section-sub">AI는 답변의 근거로 삼을 출처의 '권위(authority)'를 평가합니다. 어디에 정보가 실리느냐가 인용 여부를 가릅니다.</p></div>
+      <div class="trust-tiers">
+        <div class="trust-tier trust-tier--top"><span class="trust-rank">1순위 · 최상</span><div class="trust-body"><h4>등록 언론사 보도</h4><p>정식 등록 매체의 기사는 AI가 가장 신뢰하는 출처입니다. 제3자 검증을 거친 '권위 있는 근거'로 취급됩니다.</p></div></div>
+        <div class="trust-tier trust-tier--mid"><span class="trust-rank">2순위</span><div class="trust-body"><h4>기업 공식 웹사이트</h4><p>구조화 데이터(스키마)·엔티티가 잘 정비된 공식 사이트. 지금 이 사이트가 그 예입니다.</p></div></div>
+        <div class="trust-tier trust-tier--low"><span class="trust-rank">3순위</span><div class="trust-body"><h4>블로그 · SNS · 커뮤니티</h4><p>보조 신호로 활용되지만, 단독으로는 인용 근거로서의 무게가 낮습니다.</p></div></div>
+      </div>
+      <p class="trust-note">그래서 <strong>언론보도</strong>가 AI 추천의 핵심 지렛대입니다.<br />하오는 이를 <a href="pr.html">언론홍보 서비스 →</a> 로 함께 설계합니다.</p>
+    </div>
+  </section>
+
+  <!-- 90일 로드맵 -->
+  <section class="section vch-process" id="process">
+    <div class="container">
+      <div class="section-head center"><span class="tag">ROADMAP</span><h2 class="section-title">AI의 답이 되기까지, <span class="accent">약 90일</span></h2><p class="section-sub">생성형 엔진이 신뢰 신호를 학습·반영하는 데는 시간이 걸립니다. 하오는 그 여정을 단계로 설계합니다.</p></div>
       <div class="vch-steps">
-        <div class="vch-step"><span class="vch-step-num">01</span><h3>AI 가시성 진단</h3><p>주요 AI 플랫폼에서 브랜드가 어떻게 인식·언급되는지 진단하고 노출 공백을 찾습니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num">02</span><h3>구조·콘텐츠 설계</h3><p>AI가 읽기 쉬운 페이지 구조·스키마·엔티티·카피를 정비합니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num">03</span><h3>신뢰 신호 구축</h3><p>언론·리뷰·커뮤니티 등 오프사이트 신뢰 신호를 쌓아 AI가 인용하게 만듭니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num">04</span><h3>테스트 & 최적화</h3><p>프롬프트 테스트로 인용·추천 여부를 점검하고 원하는 결과가 나올 때까지 개선합니다.</p></div>
+        <div class="vch-step"><span class="vch-step-num">01</span><h3>AI 가시성 진단 <em style="color:var(--orange);font-style:normal;font-size:13px;">~2주</em></h3><p>4대 AI 엔진에서 브랜드가 어떻게 인식·언급되는지, 경쟁사 대비 인용 공백을 진단합니다.</p></div>
+        <div class="vch-step"><span class="vch-step-num">02</span><h3>구조·스키마 정비 <em style="color:var(--orange);font-style:normal;font-size:13px;">~30일</em></h3><p>AI가 읽기 쉬운 페이지 구조·구조화 데이터·엔티티·llms.txt·카피를 정비합니다.</p></div>
+        <div class="vch-step"><span class="vch-step-num">03</span><h3>신뢰 자산 축적 <em style="color:var(--orange);font-style:normal;font-size:13px;">~60일</em></h3><p>언론보도·전문가 칼럼·리뷰 등 AI가 신뢰하는 오프사이트 신호를 본격적으로 쌓습니다.</p></div>
+        <div class="vch-step"><span class="vch-step-num">04</span><h3>인용 측정 & 최적화 <em style="color:var(--orange);font-style:normal;font-size:13px;">~90일</em></h3><p>핵심 질문셋으로 실제 인용·추천 여부를 측정하고, 원하는 결과가 나올 때까지 개선합니다.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="section vch-products">
+  <section class="section vch-products alt-bg">
     <div class="container">
       <div class="section-head center"><span class="tag">SERVICES</span><h2 class="section-title">AI마케팅 <span class="accent">서비스 범위</span></h2></div>
       <div class="vch-prod-grid">
-        <div class="vch-prod"><span class="vch-prod-ic">AUDIT</span><h3>AI 가시성 진단</h3><p>ChatGPT·Gemini·Perplexity에서 브랜드 인식·노출 현황 분석.</p></div>
+        <div class="vch-prod"><span class="vch-prod-ic">AUDIT</span><h3>AI 가시성 진단</h3><p>ChatGPT·Gemini·Claude·Perplexity에서 브랜드 인식·노출 현황 분석.</p></div>
         <div class="vch-prod"><span class="vch-prod-ic">ONSITE</span><h3>Onsite 최적화</h3><p>AI가 읽기 쉬운 페이지 구조·UX·카피라이팅 정비.</p></div>
-        <div class="vch-prod"><span class="vch-prod-ic">SCHEMA</span><h3>스키마·엔티티</h3><p>검증된 구조화 데이터·엔티티로 정확한 인용을 유도.</p></div>
+        <div class="vch-prod"><span class="vch-prod-ic">SCHEMA</span><h3>스키마·엔티티·llms.txt</h3><p>검증된 구조화 데이터·엔티티로 정확한 인용을 유도.</p></div>
         <div class="vch-prod"><span class="vch-prod-ic">OFFSITE</span><h3>Offsite 신뢰 신호</h3><p>언론·리뷰·커뮤니티 기반 권위 신호 구축.</p></div>
         <div class="vch-prod"><span class="vch-prod-ic">GEO</span><h3>AEO·GEO 콘텐츠</h3><p>AI 답변에 인용되도록 설계한 Q&amp;A·비교 콘텐츠 제작.</p></div>
         <div class="vch-prod"><span class="vch-prod-ic">SEO</span><h3>SEO 상위노출</h3><p>네이버·구글 검색 상위노출은 기본으로 함께 진행.</p></div>
@@ -744,16 +761,48 @@ cat <<'EOF'
     </div>
   </section>
 
-  <section class="section alt-bg">
-    <div class="container" style="max-width:820px;">
-      <div class="section-head center"><span class="tag">FAQ</span><h2 class="section-title">자주 묻는 질문</h2></div>
-      <div class="faq" style="border-top:none;padding-top:0;">
-        <div class="faq-item"><h3>AI 최적화(AEO·GEO)와 기존 SEO는 무엇이 다른가요?</h3><p>SEO는 검색 결과 상위 노출이 목표라면, AEO·GEO는 AI가 답변을 만들 때 우리 브랜드를 근거로 인용·추천하게 만드는 것이 목표입니다. 키워드가 아니라 AI가 활용하는 데이터·구조·신호 자체를 설계합니다.</p></div>
-        <div class="faq-item"><h3>효과는 언제부터 보이나요?</h3><p>생성형 엔진이 학습 인덱스를 갱신하는 주기에 따라 보통 30~90일 내에 인용·추천 변화가 나타나기 시작합니다. 구조화 콘텐츠와 신뢰 신호가 쌓일수록 더 빨라집니다.</p></div>
-        <div class="faq-item"><h3>우리 업종도 효과가 있나요?</h3><p>병원·법률·프랜차이즈·커머스 등 검색과 추천이 구매로 이어지는 업종일수록 효과가 큽니다. 진단을 통해 우리 업종에서의 기회부터 확인해 드립니다.</p></div>
+  <!-- 무료 AI 가시성 진단 리포트 -->
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <div class="section-head center"><span class="tag">FREE DIAGNOSIS</span><h2 class="section-title">우리 브랜드는 지금 <span class="accent">AI에 나올까요?</span></h2><p class="section-sub">무료 AI 가시성 진단 리포트를 신청하시면, 컨설턴트가 직접 분석해 드립니다.</p></div>
+      <ul class="report-check">
+        <li>4대 AI 엔진별 현재 노출·언급 현황</li>
+        <li>경쟁사 대비 인용 점유(인용 해자) 분석</li>
+        <li>인용을 막는 온사이트·오프사이트 공백 진단</li>
+        <li>90일 안에 손대야 할 개선 우선순위</li>
+      </ul>
+      <div class="hero-actions" style="justify-content:center;margin-top:34px;">
+        <a href="contact.html" class="btn btn-primary">무료 진단 신청</a>
       </div>
     </div>
   </section>
+
+  <!-- FAQ -->
+  <section class="section alt-bg">
+    <div class="container aeo-faq-wrap">
+      <div class="section-head center"><span class="tag">FAQ</span><h2 class="section-title">AI마케팅 <span class="accent">자주 묻는 질문</span></h2></div>
+      <div class="aeo-faq">
+        <details open><summary>AI 추천 마케팅(AEO·GEO)이란 무엇인가요?</summary><p>ChatGPT·Gemini 같은 생성형 AI가 답변을 만들 때, 우리 브랜드를 <strong>근거로 인용하고 추천하게</strong> 만드는 마케팅입니다. 키워드 순위를 올리는 SEO와 달리, AI가 활용하는 데이터·구조·신뢰 신호 자체를 설계합니다.</p></details>
+        <details><summary>기존 SEO와는 무엇이 다른가요?</summary><p>SEO는 검색 결과 상위 노출이 목표이고, AEO·GEO는 <strong>AI 답변에 등장</strong>하는 것이 목표입니다. 하오는 둘을 함께 진행해, 검색과 AI 답변 양쪽에서 브랜드가 보이게 만듭니다.</p></details>
+        <details><summary>효과는 언제부터 보이나요?</summary><p>생성형 엔진이 인덱스를 갱신하는 주기에 따라 보통 <strong>60~90일</strong> 안에 인용·추천 변화가 나타나기 시작합니다. 구조화 콘텐츠와 언론 등 신뢰 신호가 쌓일수록 빨라집니다.</p></details>
+        <details><summary>언론보도가 정말 AI 인용에 도움이 되나요?</summary><p>네. AI는 출처의 권위를 평가하며, <strong>정식 등록 언론 매체의 기사에 가장 높은 가중치</strong>를 둡니다. 그래서 하오는 <a href="pr.html">언론홍보</a>를 AI마케팅과 함께 설계합니다.</p></details>
+        <details><summary>우리 업종도 효과가 있나요?</summary><p>병원·법률·프랜차이즈·커머스처럼 <strong>검색과 추천이 구매로 이어지는 업종</strong>일수록 효과가 큽니다. 무료 진단으로 우리 업종의 기회부터 확인해 보세요.</p></details>
+      </div>
+    </div>
+  </section>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "AI 추천 마케팅(AEO·GEO)이란 무엇인가요?", "acceptedAnswer": { "@type": "Answer", "text": "ChatGPT·Gemini 같은 생성형 AI가 답변을 만들 때 우리 브랜드를 근거로 인용하고 추천하게 만드는 마케팅입니다. 키워드 순위를 올리는 SEO와 달리, AI가 활용하는 데이터·구조·신뢰 신호 자체를 설계합니다." } },
+      { "@type": "Question", "name": "AI마케팅은 기존 SEO와 무엇이 다른가요?", "acceptedAnswer": { "@type": "Answer", "text": "SEO는 검색 결과 상위 노출이 목표이고 AEO·GEO는 AI 답변에 등장하는 것이 목표입니다. 하오커뮤니케이션은 둘을 함께 진행해 검색과 AI 답변 양쪽에서 브랜드가 보이게 만듭니다." } },
+      { "@type": "Question", "name": "AI마케팅 효과는 언제부터 보이나요?", "acceptedAnswer": { "@type": "Answer", "text": "생성형 엔진이 인덱스를 갱신하는 주기에 따라 보통 60~90일 안에 인용·추천 변화가 나타나기 시작합니다. 구조화 콘텐츠와 언론 등 신뢰 신호가 쌓일수록 빨라집니다." } },
+      { "@type": "Question", "name": "언론보도가 정말 AI 인용에 도움이 되나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. AI는 출처의 권위를 평가하며 정식 등록 언론 매체의 기사에 가장 높은 가중치를 둡니다. 그래서 하오커뮤니케이션은 언론홍보를 AI마케팅과 함께 설계합니다." } },
+      { "@type": "Question", "name": "우리 업종도 AI마케팅 효과가 있나요?", "acceptedAnswer": { "@type": "Answer", "text": "병원·법률·프랜차이즈·커머스처럼 검색과 추천이 구매로 이어지는 업종일수록 효과가 큽니다. 무료 진단으로 업종별 기회를 먼저 확인할 수 있습니다." } }
+    ]
+  }
+  </script>
 EOF
 cta_band
 footer_close
@@ -807,6 +856,30 @@ cat <<EOF
       </div>
     </div>
   </section>
+
+  <!-- AI 시대의 언론보도 (AEO/GEO 연결) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center"><span class="tag">AI &times; PR</span><h2 class="section-title">AI 시대, <span class="accent">언론보도가 더 중요해졌습니다</span></h2><p class="section-sub">AI는 답변의 근거로 삼을 출처의 권위(authority)를 평가합니다. 그리고 정식 등록 언론 매체의 기사를 가장 신뢰합니다.</p></div>
+      <div class="trust-tiers">
+        <div class="trust-tier trust-tier--top"><span class="trust-rank">1순위 · 최상</span><div class="trust-body"><h4>등록 언론사 보도</h4><p>제3자 검증을 거친 기사는 AI가 가장 높은 가중치로 신뢰하는 인용 근거입니다.</p></div></div>
+        <div class="trust-tier trust-tier--mid"><span class="trust-rank">2순위</span><div class="trust-body"><h4>기업 공식 웹사이트</h4><p>구조화 데이터가 잘 정비된 공식 사이트. 신뢰 신호를 보조합니다.</p></div></div>
+        <div class="trust-tier trust-tier--low"><span class="trust-rank">3순위</span><div class="trust-body"><h4>블로그 · SNS · 커뮤니티</h4><p>보조 신호로 쓰이지만 단독으로는 인용 무게가 낮습니다.</p></div></div>
+      </div>
+      <p class="trust-note">즉, 언론보도는 브랜드 홍보를 넘어 <strong>AI가 우리 브랜드를 추천하게 만드는 핵심 자산</strong>입니다.<br />하오는 언론홍보를 <a href="ai-marketing.html">AI마케팅(AEO·GEO) →</a> 와 하나의 전략으로 설계합니다.</p>
+    </div>
+  </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "언론보도가 AI 추천(AEO·GEO)에 도움이 되나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. AI는 출처의 권위를 평가하며 정식 등록 언론 매체의 기사에 가장 높은 가중치를 둡니다. 언론보도는 AI가 브랜드를 신뢰 근거로 인용·추천하게 만드는 핵심 자산입니다. 하오커뮤니케이션은 언론홍보를 AI마케팅과 하나의 전략으로 설계합니다." } },
+      { "@type": "Question", "name": "작은 회사도 언론보도가 가능한가요?", "acceptedAnswer": { "@type": "Answer", "text": "가능합니다. 신제품 출시, 수상, 투자, 사회공헌, 업계 트렌드 코멘트 등 뉴스 가치가 있는 앵글을 잡으면 규모와 무관하게 보도될 수 있습니다. 중요한 것은 회사 규모가 아니라 뉴스 가치입니다." } }
+    ]
+  }
+  </script>
 
   <section class="section vch-process alt-bg">
     <div class="container" style="max-width:820px;text-align:center;">
