@@ -272,7 +272,7 @@ cat <<EOF
   <section class="section pledge-band">
     <div class="container pledge-wrap">
       <div class="pledge-head">
-        <span class="tag">대표의 약속</span>
+        <span class="tag">하오커뮤니케이션의 약속</span>
         <h2 class="section-title">$scope <span class="accent">한 곳</span>만 맡습니다</h2>
       </div>
       <div class="pledge-card">
@@ -280,7 +280,7 @@ cat <<EOF
           하오커뮤니케이션은 이미 함께하고 있는 고객사와<br />
           <b>$scope</b>이 겹치는 업체는 새로 받지 않습니다.<br />
           경쟁사끼리 같은 손을 잡을 수는 없으니까요.<br />
-          맡은 한 곳의 성과에만 집중하겠다는, 대표의 약속입니다.
+          맡은 한 곳의 성과에만 집중하겠다는, 하오커뮤니케이션의 약속입니다.
         </p>
         <div class="pledge-sign">
           <span class="pledge-name">하오커뮤니케이션 대표 <b>박창민</b></span>
@@ -682,7 +682,6 @@ cat <<'EOF'
     </div></div>
   </section>
 EOF
-pledge_band
 cta_band
 footer_close
 } > index.html
