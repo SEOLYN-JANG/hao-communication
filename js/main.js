@@ -218,6 +218,22 @@
   );
   revealEls.forEach((el) => io.observe(el));
 
+  /* ---------- 4b. STAGGERED PLAY (프로세스·비교표) ---------- */
+  const playEls = document.querySelectorAll(".ac-proc-grid, .ac-cmp-table");
+  playEls.forEach((el) => el.classList.add("anim"));
+  const pio = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("play");
+          pio.unobserve(e.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+  playEls.forEach((el) => pio.observe(el));
+
   /* ---------- 5. COUNTER ---------- */
   const counters = document.querySelectorAll("[data-count]");
   function runCount(el) {

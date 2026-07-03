@@ -1844,6 +1844,44 @@ br.br-pc { display: inline; }
 .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
 .reveal.in { opacity: 1; transform: translateY(0); }
 
+/* ===== 프로세스 스텝 순차 등장 액션 ===== */
+.ac-proc-grid.anim .ac-proc-step { opacity: 0; transform: translateY(30px); transition: opacity .55s var(--ease), transform .55s var(--ease); }
+.ac-proc-grid.anim .ac-proc-n { transform: scale(.2); opacity: 0; transition: transform .55s cubic-bezier(.34,1.56,.64,1), opacity .35s ease; }
+.ac-proc-grid.anim .ac-proc-step::after { opacity: 0; transform: translateY(-50%) translateX(-12px); transition: opacity .4s ease, transform .45s var(--ease); }
+.ac-proc-grid.anim.play .ac-proc-step { opacity: 1; transform: translateY(0); }
+.ac-proc-grid.anim.play .ac-proc-n { transform: scale(1); opacity: 1; }
+.ac-proc-grid.anim.play .ac-proc-step::after { opacity: 1; transform: translateY(-50%) translateX(0); }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(1) { transition-delay: 0s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(2) { transition-delay: .16s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(3) { transition-delay: .32s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(4) { transition-delay: .48s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(1) .ac-proc-n { transition-delay: .14s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(2) .ac-proc-n { transition-delay: .30s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(3) .ac-proc-n { transition-delay: .46s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(4) .ac-proc-n { transition-delay: .62s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(1)::after { transition-delay: .24s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(2)::after { transition-delay: .40s; }
+.ac-proc-grid.anim.play .ac-proc-step:nth-child(3)::after { transition-delay: .56s; }
+
+/* ===== 비교표 접힘→펼침(펼쳐지는) 액션 ===== */
+.ac-cmp-table.anim { perspective: 1700px; }
+.ac-cmp-table.anim > div { opacity: 0; transform: rotateX(-82deg); transform-origin: top center; transition: opacity .5s ease, transform .62s cubic-bezier(.22,1,.36,1); }
+.ac-cmp-table.anim.play > div { opacity: 1; transform: rotateX(0); }
+.ac-cmp-table.anim.play > div:nth-child(1) { transition-delay: 0s; }
+.ac-cmp-table.anim.play > div:nth-child(2) { transition-delay: .10s; }
+.ac-cmp-table.anim.play > div:nth-child(3) { transition-delay: .20s; }
+.ac-cmp-table.anim.play > div:nth-child(4) { transition-delay: .30s; }
+.ac-cmp-table.anim.play > div:nth-child(5) { transition-delay: .40s; }
+.ac-cmp-table.anim.play > div:nth-child(6) { transition-delay: .50s; }
+.ac-cmp-table.anim.play > div:nth-child(7) { transition-delay: .60s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ac-proc-grid.anim .ac-proc-step, .ac-proc-grid.anim .ac-proc-n,
+  .ac-proc-grid.anim .ac-proc-step::after, .ac-cmp-table.anim > div {
+    opacity: 1 !important; transform: none !important; transition: none !important;
+  }
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
