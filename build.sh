@@ -1712,7 +1712,7 @@ cat <<'EOF'
           <div class="ac-cmp-c ac-cmp-hao">하오커뮤니케이션</div>
           <div class="ac-cmp-c ac-cmp-etc">일반 대행사</div>
         </div>
-        <div class="ac-cmp-row"><div class="ac-cmp-c ac-cmp-label">업종 이해도</div><div class="ac-cmp-c ac-cmp-hao"><b>교육 사업 직접 운영</b> 경험</div><div class="ac-cmp-c ac-cmp-etc">학원 특성 이해 부족</div></div>
+        <div class="ac-cmp-row"><div class="ac-cmp-c ac-cmp-label">업종 이해도</div><div class="ac-cmp-c ac-cmp-hao"><b>학원 마케팅 전담</b> · 업종별 이해</div><div class="ac-cmp-c ac-cmp-etc">학원 특성 이해 부족</div></div>
         <div class="ac-cmp-row"><div class="ac-cmp-c ac-cmp-label">성과 기준</div><div class="ac-cmp-c ac-cmp-hao"><b>실제 원생 등록</b> 기준 리포트</div><div class="ac-cmp-c ac-cmp-etc">포스팅·노출 개수 보고</div></div>
         <div class="ac-cmp-row"><div class="ac-cmp-c ac-cmp-label">콘텐츠</div><div class="ac-cmp-c ac-cmp-hao">학원별 <b>맞춤 기획</b></div><div class="ac-cmp-c ac-cmp-etc">템플릿 복사·붙여넣기</div></div>
         <div class="ac-cmp-row"><div class="ac-cmp-c ac-cmp-label">계약 방식</div><div class="ac-cmp-c ac-cmp-hao"><b>월 단위</b> · 부담 없이 시작</div><div class="ac-cmp-c ac-cmp-etc">장기 약정 요구</div></div>
@@ -2119,5 +2119,10 @@ footer_close
 } > contact.html
 
 build_column
+
+# ── 캐시 버스팅: CSS/JS 변경 시 브라우저가 최신본을 강제 로드하도록 버전 주입 ──
+ASSET_VER=$(cat css/style.css js/main.js | md5sum | cut -c1-10)
+sed -i "s|href=\"css/style\.css\"|href=\"css/style.css?v=${ASSET_VER}\"|g; s|src=\"js/main\.js\"|src=\"js/main.js?v=${ASSET_VER}\"|g" *.html
+echo "  ↳ asset version: ${ASSET_VER}"
 
 echo "✓ 완료: 페이지 + 칼럼(posts/*.post) + sitemap.xml + robots.txt"
