@@ -1238,21 +1238,6 @@ cat <<'EOF'
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="sns-cta">
-    <div class="container sns-cta-inner">
-      <div class="sns-cta-txt">
-        <h2>SNS 마케팅으로 매출 상승의 기회를 잡으세요!</h2>
-        <p>확산·게시물·경쟁력 개선으로 매출 상향을 직접 경험하세요.</p>
-        <a href="contact.html" class="btn btn-light">무료 상담 신청 →</a>
-      </div>
-      <div class="sns-cta-feats">
-        <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 11.5a8 8 0 1 1-3.5-6.6L21 4l-1 4-4-.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="3"/></svg></span>1:1 맞춤 컨설팅</div>
-        <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2h9l5 5v15H6zM15 2v5h5" stroke-linejoin="round"/><path d="M9 13h6M9 17h6" stroke-linecap="round"/></svg></span>분석 리포트 제공</div>
-        <div><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round"/><path d="M15 7h6v6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>실행 가이드 제공</div>
-      </div>
-    </div>
-  </section>
 EOF
 aeo_mock_band "브랜드" "우리 브랜드" "요즘 뜨는 OO 브랜드 추천해줘" "인스타 43만 도달 · 재구매율 높음 · 리뷰 다수" "OO브랜드" "대형 광고 집행" "OO샵" "신생 브랜드"
 pledge_band
@@ -1261,6 +1246,7 @@ faq_section "SNS마케팅 <span class=\"accent\">자주 묻는 질문</span>" \
   "어떤 채널부터 시작해야 하나요?" "업종과 고객층에 따라 다릅니다. 인스타그램·유튜브·틱톡·네이버 중 우리 브랜드에 맞는 채널을 진단해 우선순위를 정합니다." \
   "콘텐츠 제작도 대행해 주나요?" "네. 기획부터 촬영·디자인·카피·편집까지 자체 팀이 제작하고, 반응 데이터로 지속 최적화합니다." \
   "광고비는 어느 정도 필요한가요?" "목표와 업종에 따라 다릅니다. 무료 상담에서 예상 예산과 기대 효과를 함께 설계해 드립니다."
+cta_band
 footer_close
 } > sns.html
 
