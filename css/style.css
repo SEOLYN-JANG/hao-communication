@@ -670,10 +670,10 @@ br.br-pc { display: inline; }
   opacity: 0; vertical-align: middle;
   transition: width 0.6s var(--ease), margin 0.6s var(--ease), opacity 0.45s var(--ease);
 }
-.hao-logo.on { width: 1.89em; margin: 0 0.04em; opacity: 1; }
+.hao-logo.on { width: 1.91em; margin: 0 0.04em; opacity: 1; }
 .hao-logo-img {
-  position: absolute; left: 50%; top: 50%; transform: translate(calc(-50% + 0.056em), -50%);
-  width: 1.89em; height: 0.84em; object-fit: contain; display: block;
+  position: absolute; left: 50%; top: 50%; transform: translate(calc(-50% + 0.058em), -50%);
+  width: 1.91em; height: 0.84em; object-fit: contain; display: block;
 }
 
 .hao-sub {
