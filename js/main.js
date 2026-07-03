@@ -219,7 +219,7 @@
   revealEls.forEach((el) => io.observe(el));
 
   /* ---------- 4b. STAGGERED PLAY (프로세스·비교표) ---------- */
-  const playEls = document.querySelectorAll(".ac-proc-grid, .ac-cmp-table");
+  const playEls = document.querySelectorAll(".ac-proc-grid, .ac-cmp-table, .htl");
   playEls.forEach((el) => el.classList.add("anim"));
   const pio = new IntersectionObserver(
     (entries) => {

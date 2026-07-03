@@ -318,6 +318,33 @@ $html      </div>
 EOF
 }
 
+# 가로 진행선 타임라인 (스크롤 시 진행선이 채워지며 단계가 순차 점등)
+# 사용법: htl_band "제목" "01제목|01설명" "02제목|02설명" ...
+htl_band() {
+  local heading="${1:-진행 과정}"; shift
+  local steps_html="" i=0
+  for item in "$@"; do
+    i=$((i+1))
+    local t="${item%%|*}" d="${item#*|}"
+    local nn=$(printf '%02d' "$i")
+    steps_html="$steps_html      <div class=\"htl-step\"><span class=\"htl-node\"></span><span class=\"htl-n\">$nn</span><h4>$t</h4><p>${d//\\n/<br />}</p></div>
+"
+  done
+cat <<EOF
+  <section class="section htl-band">
+    <div class="container">
+      <div class="section-head"><span class="tag">HOW IT WORKS</span><h2 class="section-title">$heading</h2></div>
+      <div class="htl">
+        <span class="htl-line"><span class="htl-line-fill"></span></span>
+        <span class="htl-dot"></span>
+        <div class="htl-steps">
+$steps_html      </div>
+      </div>
+    </div>
+  </section>
+EOF
+}
+
 # 숫자 통계 밴드 (스크롤 시 카운팅 애니메이션)
 stats_band() {
 cat <<'EOF'
@@ -1970,6 +1997,12 @@ cat <<'EOF'
     </div>
   </section>
 EOF
+htl_band "진행 과정" \
+  "문의 접수|제작물 종류와 일정,\n필요한 내용을 확인합니다." \
+  "상담 · 견적|프로젝트 범위와 사양을 정리하고\n견적과 일정을 안내드립니다." \
+  "기획 · 디자인|자료를 검토한 뒤 브랜드에 맞는\n방향으로 시안을 제작합니다." \
+  "수정 · 검수|전달주신 의견을 반영하고\n최종 제작 전 결과물을 검수합니다." \
+  "인쇄 · 납품|인쇄와 후가공을 진행한 뒤\n완성된 결과물을 납품합니다."
 why_band
 faq_section "디자인센터 <span class=\"accent\">자주 묻는 질문</span>" \
   "디자인만 따로 의뢰할 수 있나요?" "네. 로고·CI/BI, 상세페이지, 홍보물, 홈페이지 등 필요한 디자인만 단독으로 진행할 수 있습니다." \
