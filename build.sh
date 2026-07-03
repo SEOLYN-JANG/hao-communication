@@ -1144,11 +1144,15 @@ cat <<'EOF'
   <section class="section vch-process alt-bg" id="process">
     <div class="container">
       <div class="section-head center"><span class="tag">SNS 마케팅</span><h2 class="section-title">시장 분석을 통한 <span class="accent">경쟁력 강화</span></h2><p class="section-sub">업계 우수 사례와 경쟁사를 비교 분석해 차별화된 전략을 수립하고, 사업의 본질적 개선을 이끕니다.</p></div>
-      <div class="vch-steps">
-        <div class="vch-step"><span class="vch-step-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4" stroke-linecap="round"/></svg></span><h3>업체 탐색</h3><p>동종 업계에서 잘되는 업체를 찾아 성공 요인을 분석합니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="12" width="4" height="8" rx="1"/><rect x="10" y="7" width="4" height="13" rx="1"/><rect x="16" y="3" width="4" height="17" rx="1"/></svg></span><h3>강점·약점 분석</h3><p>우리 브랜드의 강점과 약점을 데이터로 진단합니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3z" stroke-linejoin="round"/></svg></span><h3>차별화 전략</h3><p>경쟁사 대비 차별화된 콘텐츠·경쟁력을 설계합니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4h10v5a5 5 0 0 1-10 0V4zM7 6H4v2a3 3 0 0 0 3 3M17 6h3v2a3 3 0 0 1-3 3M9 18h6M10 21h4" stroke-linejoin="round"/></svg></span><h3>시장 경쟁력 강화</h3><p>실행·최적화로 시장에서의 경쟁력을 끌어올립니다.</p></div>
+      <div class="htl">
+        <span class="htl-line"><span class="htl-line-fill"></span></span>
+        <span class="htl-dot"></span>
+        <div class="htl-steps">
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">01</span><h4>업체 탐색</h4><p>동종 업계에서 잘되는 업체를<br />찾아 성공 요인을 분석합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">02</span><h4>강점·약점 분석</h4><p>우리 브랜드의 강점과 약점을<br />데이터로 진단합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">03</span><h4>차별화 전략</h4><p>경쟁사 대비 차별화된<br />콘텐츠·경쟁력을 설계합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">04</span><h4>시장 경쟁력 강화</h4><p>실행·최적화로 시장에서의<br />경쟁력을 끌어올립니다.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1794,11 +1798,15 @@ cat <<'EOF'
         <span class="tag">PROCESS</span>
         <h2 class="section-title">등록까지, <span class="accent">4단계</span></h2>
       </div>
-      <div class="ac-proc-grid">
-        <div class="ac-proc-step"><span class="ac-proc-n">01</span><h4>학원 진단</h4><p>상권·경쟁 학원·타깃 학년을 분석해 현재 위치를 진단합니다.</p></div>
-        <div class="ac-proc-step"><span class="ac-proc-n">02</span><h4>맞춤 기획</h4><p>과목·시즌에 맞춰 채널 조합과 메시지를 학원별로 설계합니다.</p></div>
-        <div class="ac-proc-step"><span class="ac-proc-n">03</span><h4>실행·운영</h4><p>플레이스·블로그·광고를 동시에 운영하며 반응을 최적화합니다.</p></div>
-        <div class="ac-proc-step"><span class="ac-proc-n">04</span><h4>등록 리포트</h4><p>문의·상담·실제 등록까지 추적해 '진짜 성과'로 보고드립니다.</p></div>
+      <div class="htl">
+        <span class="htl-line"><span class="htl-line-fill"></span></span>
+        <span class="htl-dot"></span>
+        <div class="htl-steps">
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">01</span><h4>학원 진단</h4><p>상권·경쟁 학원·타깃 학년을<br />분석해 현재 위치를 진단합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">02</span><h4>맞춤 기획</h4><p>과목·시즌에 맞춰 채널 조합과<br />메시지를 학원별로 설계합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">03</span><h4>실행·운영</h4><p>플레이스·블로그·광고를 동시에<br />운영하며 반응을 최적화합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">04</span><h4>등록 리포트</h4><p>문의·상담·실제 등록까지 추적해<br />'진짜 성과'로 보고드립니다.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1945,11 +1953,15 @@ cat <<'EOF'
   <section class="section vch-process alt-bg">
     <div class="container">
       <div class="section-head center"><span class="tag">PROCESS</span><h2 class="section-title">바우처 <span class="accent">진행 절차</span></h2><p class="section-sub">상담부터 사업수행까지, 하오가 전 과정을 함께합니다.</p></div>
-      <div class="vch-steps">
-        <div class="vch-step"><span class="vch-step-num">01</span><h3>바우처 상품 상담</h3><p>진행을 희망하는 내용·금액을 알려주시면 맞춤 상담을 진행합니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num">02</span><h3>결제 진행</h3><p>최종 상담 후 혁신바우처 플랫폼에서 '하오커뮤니케이션' 구매·결제.</p></div>
-        <div class="vch-step"><span class="vch-step-num">03</span><h3>계약 진행</h3><p>수행계약서 작성·승인·협약 체결 (바우처 선정일 50일 이내).</p></div>
-        <div class="vch-step"><span class="vch-step-num">04</span><h3>사업 수행</h3><p>계약 기반 사업수행, 중간점검·완료점검까지 진행합니다.</p></div>
+      <div class="htl">
+        <span class="htl-line"><span class="htl-line-fill"></span></span>
+        <span class="htl-dot"></span>
+        <div class="htl-steps">
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">01</span><h4>바우처 상품 상담</h4><p>진행을 희망하는 내용·금액을<br />알려주시면 맞춤 상담을 진행합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">02</span><h4>결제 진행</h4><p>최종 상담 후 혁신바우처 플랫폼에서<br />'하오커뮤니케이션' 구매·결제.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">03</span><h4>계약 진행</h4><p>수행계약서 작성·승인·협약 체결<br />(바우처 선정일 50일 이내).</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">04</span><h4>사업 수행</h4><p>계약 기반 사업수행, 중간점검·<br />완료점검까지 진행합니다.</p></div>
+        </div>
       </div>
     </div>
   </section>
