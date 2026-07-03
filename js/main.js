@@ -449,7 +449,7 @@
     const next = hx.querySelector(".hx-next");
     const cards = Array.prototype.slice.call(track.querySelectorAll(".hx-card"));
     const dots = Array.prototype.slice.call((sec || hx).querySelectorAll(".hx-dot"));
-    const DELAY = 5000;
+    const DELAY = 3500;
     let timer = null;
 
     const activeIndex = () => {
