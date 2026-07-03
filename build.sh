@@ -1132,10 +1132,10 @@ cat <<'EOF'
     <div class="container">
       <div class="section-head center"><span class="tag">WHY NOT YET</span><h2 class="section-title">가맹문의는 많은데 계약은 없던 <span class="accent">이유</span></h2></div>
       <div class="ac-pain-grid">
-        <div class="ac-pain-card"><span class="ac-pain-ico">📞</span><p>문의는 오는데 <strong>진성이 아니라</strong><br />상담만 하고 계약은 안 됩니다.</p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">💸</span><p>무작정 광고비만 태우다<br /><strong>진성 아닌 DB</strong>에 예산을 낭비합니다.</p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">🤔</span><p>브랜드 신뢰가 약해<br />예비 점주가 <strong>상담에서 이탈</strong>합니다.</p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">🧩</span><p>기획·브랜딩·영업이 <strong>따로</strong> 놀아<br />여기저기 알아보다 지칩니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><p>문의는 오는데 <strong>진성이 아니라</strong><br />상담만 하고 계약은 안 됩니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span><p>무작정 광고비만 태우다<br /><strong>진성 아닌 DB</strong>에 예산을 낭비합니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><p>브랜드 신뢰가 약해<br />예비 점주가 <strong>상담에서 이탈</strong>합니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></span><p>기획·브랜딩·영업이 <strong>따로</strong> 놀아<br />여기저기 알아보다 지칩니다.</p></div>
       </div>
       <p class="ac-pain-punch">문제는 문의 <span class="strike">개수</span>가 아니라, <span class="accent">진성 계약</span>입니다.</p>
     </div>
@@ -1221,10 +1221,10 @@ cat <<'EOF'
     <div class="container">
       <div class="section-head center"><span class="tag">CHECKLIST</span><h2 class="section-title">예비 점주는 <span class="accent">이것</span>을 봅니다</h2></div>
       <div class="ac-target-grid">
-        <div class="ac-target-card"><span>💰</span><h4>수익성·마진</h4><p>평균 매출·마진율 등 '벌 수 있다'는 근거</p></div>
-        <div class="ac-target-card"><span>🏦</span><h4>초기 투자·본사 지원</h4><p>창업 비용과 본사가 무엇을 해주는지</p></div>
-        <div class="ac-target-card"><span>🗣️</span><h4>점주 후기</h4><p>실제 운영 중인 점주의 생생한 후기</p></div>
-        <div class="ac-target-card"><span>📍</span><h4>예상 매출·입지</h4><p>내 지역에서의 예상 성과와 상권 분석</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></span><h4>수익성·마진</h4><p>평균 매출·마진율 등 '벌 수 있다'는 근거</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><h4>초기 투자·본사 지원</h4><p>창업 비용과 본사가 무엇을 해주는지</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><h4>점주 후기</h4><p>실제 운영 중인 점주의 생생한 후기</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><h4>예상 매출·입지</h4><p>내 지역에서의 예상 성과와 상권 분석</p></div>
       </div>
     </div>
   </section>
@@ -1285,10 +1285,10 @@ cat <<'EOF'
     <div class="container">
       <div class="section-head center"><span class="tag">WHY NOT YET</span><h2 class="section-title">돈은 썼는데 상담은 없던 <span class="accent">3가지 이유</span></h2></div>
       <div class="ac-pain-grid">
-        <div class="ac-pain-card"><span class="ac-pain-ico">💸</span><p>콘텐츠 없이 <strong>고액 광고</strong>에만<br />클릭당 수만 원, 상담은 그대로.</p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">📄</span><p><strong>저가 외주 글</strong>로 채운 블로그<br />순위도, 신뢰도 얻지 못했습니다.</p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">🎯</span><p>모든 채널을 <strong>동시에</strong> 시작<br />힘이 분산돼 어느 것도 안 됐습니다.</p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">🔍</span><p>검색·AI에 <strong>안 보이는 변호사</strong><br />의뢰인의 선택지에 오르지 못합니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span><p>콘텐츠 없이 <strong>고액 광고</strong>에만<br />클릭당 수만 원, 상담은 그대로.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><p><strong>저가 외주 글</strong>로 채운 블로그<br />순위도, 신뢰도 얻지 못했습니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><p>모든 채널을 <strong>동시에</strong> 시작<br />힘이 분산돼 어느 것도 안 됐습니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><p>검색·AI에 <strong>안 보이는 변호사</strong><br />의뢰인의 선택지에 오르지 못합니다.</p></div>
       </div>
       <p class="ac-pain-punch">문제는 <span class="strike">실력</span>이 아니라, <span class="accent">발견되지 않는 구조</span>입니다.</p>
     </div>
@@ -1375,10 +1375,10 @@ cat <<'EOF'
     <div class="container">
       <div class="section-head center"><span class="tag">FOR</span><h2 class="section-title">분야에 맞는 <span class="accent">전략</span>으로</h2></div>
       <div class="ac-target-grid">
-        <div class="ac-target-card"><span>⚖️</span><h4>형사·교통</h4><p>음주·교통사고·형사사건 등 급박한 검색 대응</p></div>
-        <div class="ac-target-card"><span>💔</span><h4>이혼·가사</h4><p>이혼·상속·양육 등 민감한 상담 신뢰 설계</p></div>
-        <div class="ac-target-card"><span>🏢</span><h4>기업·노무</h4><p>기업 자문·노동·계약 분쟁 B2B 포지셔닝</p></div>
-        <div class="ac-target-card"><span>🏠</span><h4>부동산·민사</h4><p>부동산·손해배상·민사 지역 기반 노출</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"/><path d="M2 16l3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></span><h4>형사·교통</h4><p>음주·교통사고·형사사건 등 급박한 검색 대응</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h4>이혼·가사</h4><p>이혼·상속·양육 등 민감한 상담 신뢰 설계</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><line x1="8" y1="6" x2="8.01" y2="6"/><line x1="16" y1="6" x2="16.01" y2="6"/><line x1="12" y1="6" x2="12.01" y2="6"/><line x1="12" y1="10" x2="12.01" y2="10"/><line x1="12" y1="14" x2="12.01" y2="14"/><line x1="16" y1="10" x2="16.01" y2="10"/><line x1="8" y1="10" x2="8.01" y2="10"/></svg></span><h4>기업·노무</h4><p>기업 자문·노동·계약 분쟁 B2B 포지셔닝</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span><h4>부동산·민사</h4><p>부동산·손해배상·민사 지역 기반 노출</p></div>
       </div>
     </div>
   </section>
@@ -1456,7 +1456,7 @@ cat <<'EOF'
             <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/naver.svg" alt="네이버" loading="lazy" /></span><span>네이버 블로그</span></div>
             <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/naver.svg" alt="네이버" loading="lazy" /></span><span>네이버 플레이스</span></div>
             <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/google.svg" alt="검색광고" loading="lazy" /></span><span>검색광고</span></div>
-            <div class="hx-ic"><span class="hx-ic-img hx-emoji">📰</span><span>언론보도</span></div>
+            <div class="hx-ic"><span class="hx-ic-img hx-emoji"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><line x1="18" y1="14" x2="10" y2="14"/><line x1="15" y1="18" x2="10" y2="18"/><rect x="10" y="6" width="8" height="4"/></svg></span><span>언론보도</span></div>
             <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/instagram.svg" alt="인스타그램" loading="lazy" /></span><span>인스타그램</span></div>
             <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/youtube.svg" alt="유튜브" loading="lazy" /></span><span>유튜브</span></div>
           </div>
@@ -1596,10 +1596,10 @@ cat <<'EOF'
         <h2 class="section-title">혹시, <span class="accent">이런 고민</span> 없으신가요?</h2>
       </div>
       <div class="ac-pain-grid">
-        <div class="ac-pain-card"><span class="ac-pain-ico">📉</span><p>광고비만 <strong>매달 빠져나가는데</strong><br />정작 문의 전화는 조용합니다.</p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">📍</span><p>네이버 지도에서 <strong>옆 학원이</strong><br />우리보다 위에 먼저 뜹니다.</p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">✍️</span><p>블로그는 열심히 올리는데<br /><strong>등록으로 이어지질 않습니다.</strong></p></div>
-        <div class="ac-pain-card"><span class="ac-pain-ico">🤝</span><p>대행사는 많은데 <strong>학원이</strong><br /><strong>뭔지</strong> 이해하는 곳이 없습니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span><p>광고비만 <strong>매달 빠져나가는데</strong><br />정작 문의 전화는 조용합니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><p>네이버 지도에서 <strong>옆 학원이</strong><br />우리보다 위에 먼저 뜹니다.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></span><p>블로그는 열심히 올리는데<br /><strong>등록으로 이어지질 않습니다.</strong></p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><p>대행사는 많은데 <strong>학원이</strong><br /><strong>뭔지</strong> 이해하는 곳이 없습니다.</p></div>
       </div>
       <p class="ac-pain-punch">문제는 <span class="strike">노출</span>이 아니라, <span class="accent">등록</span>입니다.</p>
     </div>
@@ -1728,10 +1728,10 @@ cat <<'EOF'
         <h2 class="section-title">이런 교육 사업에 <span class="accent">딱 맞습니다</span></h2>
       </div>
       <div class="ac-target-grid">
-        <div class="ac-target-card"><span>🏫</span><h4>지역 학원</h4><p>보습·입시·논술·영어수학 등 동네 기반 학원</p></div>
-        <div class="ac-target-card"><span>🎨</span><h4>예체능 학원</h4><p>미술·음악·태권도·무용 등 실기 중심 학원</p></div>
-        <div class="ac-target-card"><span>🎓</span><h4>유학·어학</h4><p>유학원, 어학연수, 성인 대상 교육 서비스</p></div>
-        <div class="ac-target-card"><span>💻</span><h4>온라인 교육</h4><p>온라인 클래스·강의, 교육 커머스 브랜드</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"/><path d="M9 22v-5h6v5"/><line x1="9" y1="7" x2="15" y2="7"/><line x1="9" y1="11" x2="15" y2="11"/></svg></span><h4>지역 학원</h4><p>보습·입시·논술·영어수학 등 동네 기반 학원</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".8"/><circle cx="17.5" cy="10.5" r=".8"/><circle cx="8.5" cy="7.5" r=".8"/><circle cx="6.5" cy="12.5" r=".8"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.83-.44-1.12-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.55-2.5 5.55-5.55C21.96 6.01 17.46 2 12 2z"/></svg></span><h4>예체능 학원</h4><p>미술·음악·태권도·무용 등 실기 중심 학원</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><line x1="22" y1="10" x2="22" y2="16"/></svg></span><h4>유학·어학</h4><p>유학원, 어학연수, 성인 대상 교육 서비스</p></div>
+        <div class="ac-target-card"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><h4>온라인 교육</h4><p>온라인 클래스·강의, 교육 커머스 브랜드</p></div>
       </div>
     </div>
   </section>
