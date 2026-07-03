@@ -368,6 +368,31 @@ cat <<EOF
 EOF
 }
 
+# AI 추천 목업 (타이핑 애니메이션 + 추천 리스트, 우리 업체 1위 강조)
+# 사용법: aeo_mock_band "업종" "우리라벨" "AI질문" "우리설명" "경쟁1" "경쟁1설명" "경쟁2" "경쟁2설명"
+aeo_mock_band() {
+  local subject="$1" ourlabel="$2" query="$3" ourdesc="$4" c1="$5" c1d="$6" c2="$7" c2d="$8"
+cat <<EOF
+  <section class="section aeo-mock-sec alt-bg">
+    <div class="container">
+      <div class="section-head center"><span class="tag">AI SEARCH · AEO</span><h2 class="section-title">AI가 추천하는 $subject 목록에,<br /><span class="accent">우리 이름</span>이 있나요?</h2><p class="section-sub">고객은 이제 검색을 넘어 ChatGPT·Perplexity에게 묻습니다. 그 답 안에 들어가야 선택받습니다.</p></div>
+      <div class="ai-mock" id="aiMock">
+        <div class="ai-bar"><span class="ai-dots"><i></i><i></i><i></i></span><span class="ai-url">haocomm.ai/ai-recommend</span></div>
+        <div class="ai-body">
+          <div class="ai-query"><span id="aiType" data-text='"$query"'></span><span class="ai-caret"></span><span class="ai-spark">&#10022;</span></div>
+          <div class="ai-answer" id="aiAnswer">
+            <p class="ai-ans">후기·전문성·평판과 AI 검색 노출을 종합해 추천 결과를 정리해 드립니다.</p>
+            <div class="ai-card ai-card-hi"><div><strong>$ourlabel</strong><span>$ourdesc</span></div><span class="ai-badge">&#9733; AEO 최적화 완료</span></div>
+            <div class="ai-card"><div><strong>$c1</strong><span>$c1d</span></div></div>
+            <div class="ai-card"><div><strong>$c2</strong><span>$c2d</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+EOF
+}
+
 # 숫자 통계 밴드 (스크롤 시 카운팅 애니메이션)
 stats_band() {
 cat <<'EOF'
@@ -1234,6 +1259,7 @@ faq_section "SNS마케팅 <span class=\"accent\">자주 묻는 질문</span>" \
   "어떤 채널부터 시작해야 하나요?" "업종과 고객층에 따라 다릅니다. 인스타그램·유튜브·틱톡·네이버 중 우리 브랜드에 맞는 채널을 진단해 우선순위를 정합니다." \
   "콘텐츠 제작도 대행해 주나요?" "네. 기획부터 촬영·디자인·카피·편집까지 자체 팀이 제작하고, 반응 데이터로 지속 최적화합니다." \
   "광고비는 어느 정도 필요한가요?" "목표와 업종에 따라 다릅니다. 무료 상담에서 예상 예산과 기대 효과를 함께 설계해 드립니다."
+aeo_mock_band "브랜드" "우리 브랜드" "요즘 뜨는 OO 브랜드 추천해줘" "인스타 43만 도달 · 재구매율 높음 · 리뷰 다수" "OO브랜드" "대형 광고 집행" "OO샵" "신생 브랜드"
 pledge_band
 footer_close
 } > sns.html
@@ -1375,6 +1401,7 @@ cat <<'EOF'
   </section>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"가맹문의는 오는데 계약이 안 됩니다. 왜인가요?","acceptedAnswer":{"@type":"Answer","text":"문의 수와 진성 계약은 다릅니다. 창업 의지가 낮은 DB에 광고비를 쓰면 상담만 늘고 계약은 안 됩니다. 하오는 진성 타깃 DB 설계와 개인화 상담, 랜딩 전환으로 실제 계약률을 끌어올립니다."}},{"@type":"Question","name":"이제 막 시작하는 브랜드도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네. 브랜드 기획 단계부터 함께합니다. 아이템·컨셉 정립, 수익구조와 본사 지원 설계부터 시작해 팔리는 확장의 토대를 만들어 드립니다."}},{"@type":"Question","name":"프랜차이즈 브랜딩부터 새로 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"현재 브랜드 상태를 먼저 진단한 뒤 필요한 부분만 보완합니다. CI·BI, 매장 컨셉, 가맹 홈페이지, 채널 정비 중 우선순위를 정해 진행합니다."}},{"@type":"Question","name":"가맹점 모집까지 전 과정을 맡길 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 본사 브랜딩부터 진성 DB 광고, 가맹 모집 홈페이지와 랜딩, 상담 전환까지 원스톱으로 실제 가맹 계약으로 이어지는 전 과정을 지원합니다."}},{"@type":"Question","name":"프랜차이즈 마케팅 비용은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"브랜드 상황과 필요한 범위에 따라 맞춤 견적으로 안내드립니다. 먼저 무료 상담으로 현황 진단부터 받아보세요."}}]}</script>
 EOF
+aeo_mock_band "프랜차이즈" "우리 브랜드" "창업하기 좋은 프랜차이즈 추천해줘" "검증된 수익모델 · 점주 만족도 4.8 · 본사 지원 우수" "OO프랜차이즈" "대형 브랜드 · 높은 초기비용" "OO창업" "신생 브랜드"
 webaeo_band "프랜차이즈 브랜드" "창업하기 좋은 프랜차이즈 추천해줘" "예비 점주는 이제 포털 검색과 AI에게 '어떤 브랜드가 좋냐'고 묻습니다. 그 답에 우리 브랜드가 있어야 진짜 문의로 이어집니다."
 pledge_band
 cta_band
@@ -1529,6 +1556,7 @@ cat <<'EOF'
   </section>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"변호사 마케팅, 꼭 해야 할까요?","acceptedAnswer":{"@type":"Answer","text":"변호사 4만 명 시대, 의뢰인은 검색과 AI로 변호사를 찾고 비교합니다. 검색에 보이지 않으면 아무리 뛰어난 실력도 선택지에 오르지 못합니다. 마케팅은 선택이 아니라 노출의 기본이 되었습니다."}},{"@type":"Question","name":"변호사 마케팅, 무엇부터 시작해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"모든 채널을 동시에 시작하면 힘이 분산됩니다. 국내 검색의 62.9%를 차지하는 네이버 블로그(전문 콘텐츠)부터 쌓고, 플레이스·독립 홈페이지·AI 검색으로 확장하는 것이 정석입니다."}},{"@type":"Question","name":"변호사 블로그, 정말 효과가 있나요?","acceptedAnswer":{"@type":"Answer","text":"있습니다. 단, 저가 외주 짜깁기 글로는 순위도 신뢰도 얻지 못합니다. 실제 의뢰인이 검색하는 질문을 제목으로, 사례·전문성을 담은 콘텐츠만이 상담으로 이어집니다. 보통 1~3개월에 유입, 6개월에 오가닉 상담 구조가 형성됩니다."}},{"@type":"Question","name":"변호사 광고 규정 위반이 걱정됩니다.","acceptedAnswer":{"@type":"Answer","text":"변호사법과 광고 규정을 숙지한 상태로 콘텐츠·광고를 설계합니다. 규정 준수를 전제로 안전하게 진행해 리스크를 사전에 차단합니다."}},{"@type":"Question","name":"AI 검색(ChatGPT·Perplexity)에도 노출되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 구조화된 FAQ·프로필·스키마와 독립 홈페이지 SEO로 AEO·GEO 최적화를 진행해, AI 답변에서 신뢰 변호사로 인용되도록 설계합니다."}}]}</script>
 EOF
+aeo_mock_band "변호사" "우리 사무소" "이혼 잘하는 변호사 추천해줘" "이혼·가사 전문 · 상담후기 200+ · 승소사례 다수" "OO법률사무소" "종합 법무 · 대형 로펌" "OO변호사" "형사 사건 위주"
 webaeo_band "법률사무소" "이혼 잘하는 변호사 추천해줘" "의뢰인은 급할 때 검색하고, 이제는 AI에게 변호사를 묻습니다. 그 답에 우리가 있어야 실제 선임으로 이어집니다."
 pledge_band
 cta_band
@@ -1879,6 +1907,7 @@ faq_section "학원마케팅 <span class=\"accent\">자주 묻는 질문</span>"
   "블로그만으로는 부족한가요?" "블로그는 기본입니다. 플레이스·검색광고·AI 검색까지 함께 잡아야 실제 등록으로 연결됩니다." \
   "어떤 학원에 맞나요?" "보습·입시·예체능·유학·온라인 클래스 등 지역과 과목 기반 교육 사업 전반에 맞습니다." \
   "성과는 어떻게 확인하나요?" "노출·조회가 아니라 문의·상담·실제 원생 등록까지 추적해 리포트로 보고드립니다."
+aeo_mock_band "학원" "우리 학원" "우리 동네 수학 학원 추천해줘" "도보 5분 · 내신·수능 대비 · 학부모 만족도 4.9" "OO수학학원" "대형 프랜차이즈 · 그룹 수업" "OO교습소" "개인 과외 중심"
 webaeo_band "학원" "우리 동네 수학 학원 추천해줘" "학부모는 검색과 맘카페, 그리고 이제 AI로 학원을 찾습니다. 검색과 AI에 발견되지 않으면 등록으로 이어지지 않습니다."
 pledge_band
 cta_band
@@ -2052,6 +2081,7 @@ cat <<'EOF'
     </div>
   </section>
 EOF
+aeo_mock_band "수행기관" "하오커뮤니케이션" "수출바우처 잘하는 수행기관 추천해줘" "공식 수행기관 · 마케팅 전문 · 다수 수행 경험" "OO에이전시" "일반 대행 · 바우처 경험 적음" "OO컨설팅" "컨설팅 위주"
 cta_band
 footer_close
 } > gov.html
@@ -2096,6 +2126,7 @@ faq_section "디자인센터 <span class=\"accent\">자주 묻는 질문</span>"
   "마케팅과 함께하면 뭐가 좋나요?" "브랜드 톤이 일관되게 유지되고, 디자인이 곧바로 광고·콘텐츠 성과로 이어집니다." \
   "작업 기간은 얼마나 걸리나요?" "범위에 따라 다르며, 상담 시 항목별 일정과 산출물을 명확히 안내해 드립니다." \
   "수정은 몇 번까지 되나요?" "합의된 범위 내에서 충분히 반영하며, 시작 전 수정 정책을 투명하게 안내합니다."
+aeo_mock_band "디자인 파트너" "하오 디자인센터" "상세페이지 잘 만드는 곳 추천해줘" "브랜딩~상세~영상 원스톱 · 전환율 중심 설계" "OO디자인" "템플릿 위주 작업" "프리랜서" "단건 작업"
 cta_band
 footer_close
 } > design.html
