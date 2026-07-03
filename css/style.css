@@ -240,12 +240,12 @@ br.br-pc { display: inline; }
   background: #fff; border: 1px solid var(--line); border-radius: 32px;
   padding: 48px 46px 56px; overflow: hidden;
   box-shadow: 0 20px 46px -30px rgba(14,14,18,.28);
-  transform: scale(0.9); opacity: 0.6; transform-origin: center;
-  transition: transform .5s var(--ease), opacity .5s var(--ease), box-shadow .5s var(--ease);
+  transform: scale(0.82); opacity: 0.5; transform-origin: center;
+  transition: transform .4s var(--ease), opacity .4s var(--ease), box-shadow .4s var(--ease);
 }
 .hx-card.is-active {
   transform: scale(1); opacity: 1;
-  box-shadow: 0 44px 84px -32px rgba(14,14,18,.5);
+  box-shadow: 0 44px 88px -30px rgba(14,14,18,.55);
 }
 .hx-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
 .hx-badge {
