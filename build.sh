@@ -1186,7 +1186,7 @@ footer_close
 # ---------- 병원 ----------
 {
 head_open "병원마케팅 | 하오커뮤니케이션" "의료광고 심의 기준을 준수하며 내원 환자를 늘리는 하오의 병원마케팅."
-banner "MEDICAL" "병원마케팅" "이제는! 병원마케팅도 트렌디하게"
+banner "MEDICAL" "병원마케팅" "AI에게 물었을 때, 답이 되는 병원"
 cat <<'EOF'
   <!-- 히어로 + AI 검색 타이핑 목업 -->
   <section class="section hosp-hero">
