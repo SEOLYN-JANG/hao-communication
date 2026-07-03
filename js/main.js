@@ -439,4 +439,27 @@
 
     render();
   }
+
+  /* ---------- 9. HOSPITAL 검색→AI 가로 스크롤 ---------- */
+  const hx = document.querySelector(".hx-carousel");
+  if (hx) {
+    const track = hx.querySelector(".hx-track");
+    const prev = hx.querySelector(".hx-prev");
+    const next = hx.querySelector(".hx-next");
+    const step = () => {
+      const card = track.querySelector(".hx-card");
+      const gap = parseFloat(getComputedStyle(track).columnGap || "24") || 24;
+      return card ? card.getBoundingClientRect().width + gap : 380;
+    };
+    const upd = () => {
+      const max = track.scrollWidth - track.clientWidth - 2;
+      prev.classList.toggle("is-disabled", track.scrollLeft <= 2);
+      next.classList.toggle("is-disabled", track.scrollLeft >= max);
+    };
+    prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
+    next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
+    track.addEventListener("scroll", upd, { passive: true });
+    window.addEventListener("resize", upd);
+    upd();
+  }
 })();

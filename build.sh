@@ -1220,6 +1220,74 @@ cat <<'EOF'
     </div>
   </section>
 
+  <!-- AI 검색 전환 스토리 (가로 스크롤 4카드) -->
+  <section class="section hx-sec">
+    <div class="container">
+      <div class="section-head center"><span class="tag">SEARCH &rarr; AI</span><h2 class="section-title">검색하는 환자에서, <span class="accent">질문하는 환자</span>로</h2><p class="section-sub">환자가 병원을 찾는 방식이 바뀌고 있습니다. 하오는 검색과 AI 답변, 두 흐름을 하나로 연결합니다.</p></div>
+    </div>
+    <div class="hx-carousel">
+      <button class="hx-arrow hx-prev" type="button" aria-label="이전">&#8249;</button>
+      <div class="hx-track">
+        <article class="hx-card" style="--hc:#3a6ea5">
+          <div class="hx-head"><span class="hx-badge">🔍</span><span class="hx-cat">TRADITIONAL MARKETING</span></div>
+          <h3 class="hx-title">환자가 <span>검색하는</span> 곳</h3>
+          <p class="hx-quote">"네이버에만 있는 병원,<br />AI 검색에서는 보이지 않습니다."</p>
+          <div class="hx-grid">
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/naver.svg" alt="네이버" loading="lazy" /></span><span>네이버 블로그</span></div>
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/naver.svg" alt="네이버" loading="lazy" /></span><span>네이버 플레이스</span></div>
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/google.svg" alt="검색광고" loading="lazy" /></span><span>검색광고</span></div>
+            <div class="hx-ic"><span class="hx-ic-img hx-emoji">📰</span><span>언론보도</span></div>
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/instagram.svg" alt="인스타그램" loading="lazy" /></span><span>인스타그램</span></div>
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/youtube.svg" alt="유튜브" loading="lazy" /></span><span>유튜브</span></div>
+          </div>
+          <span class="hx-num">01</span>
+        </article>
+
+        <article class="hx-card" style="--hc:#ea4324">
+          <div class="hx-head"><span class="hx-badge">🤖</span><span class="hx-cat">AI SEARCH MARKETING</span></div>
+          <h3 class="hx-title">환자가 <span>질문하는</span> 곳</h3>
+          <p class="hx-quote">"환자의 검색이 AI로 바뀌고 있습니다.<br />준비되셨습니까?"</p>
+          <div class="hx-grid">
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/chatgpt.svg" alt="ChatGPT" loading="lazy" /></span><span>ChatGPT</span></div>
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/gemini.svg" alt="Gemini" loading="lazy" /></span><span>Gemini</span></div>
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/claude.svg" alt="Claude" loading="lazy" /></span><span>Claude</span></div>
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/perplexity.svg" alt="Perplexity" loading="lazy" /></span><span>Perplexity</span></div>
+            <div class="hx-ic"><span class="hx-ic-img"><img src="assets/logos/google.svg" alt="AI Overview" loading="lazy" /></span><span>AI Overview</span></div>
+          </div>
+          <span class="hx-num">02</span>
+        </article>
+
+        <article class="hx-card" style="--hc:#2f8f8a">
+          <div class="hx-head"><span class="hx-badge">🔗</span><span class="hx-cat">BRIDGE STRATEGY</span></div>
+          <h3 class="hx-title">하오가 <span>연결합니다</span></h3>
+          <p class="hx-quote">기존 마케팅의 자산이<br />AI 검색의 연료가 되는 선순환 구조</p>
+          <ul class="hx-steps">
+            <li><span class="hx-check">✓</span><div><strong>콘텐츠 자산 → AI 학습 데이터</strong><em>양질의 콘텐츠가 많을수록 AI가 병원을 더 잘 이해합니다.</em></div></li>
+            <li><span class="hx-check">✓</span><div><strong>AI 추천 노출 → 병원 브랜드 신뢰 상승</strong><em>AI 검색과 기존 검색이 서로를 강화합니다.</em></div></li>
+            <li><span class="hx-check">✓</span><div><strong>병원 브랜드 신뢰 → 환자 선택 증가</strong><em>AI가 쌓아준 신뢰가 결국 환자의 선택으로 이어집니다.</em></div></li>
+          </ul>
+          <span class="hx-num">03</span>
+        </article>
+
+        <article class="hx-card hx-card-dark" style="--hc:#111827">
+          <div class="hx-head"><span class="hx-badge">🏆</span><span class="hx-cat">RESULT</span></div>
+          <h3 class="hx-title">결국 <span>같은 병원</span>을 선택합니다</h3>
+          <p class="hx-quote">"검색하는 환자도, 질문하는 환자도<br />같은 병원을 선택합니다."</p>
+          <div class="hx-flow">
+            <div class="hx-flow-top">
+              <div class="hx-fchip hx-fchip-1"><span>🔍</span>환자가 검색해도</div>
+              <div class="hx-fchip hx-fchip-2"><span>🤖</span>AI에 물어봐도</div>
+            </div>
+            <div class="hx-flow-join"><i></i><i></i></div>
+            <div class="hx-fresult"><span>＋</span>같은 병원이 나옵니다</div>
+          </div>
+          <span class="hx-num">04</span>
+        </article>
+      </div>
+      <button class="hx-arrow hx-next" type="button" aria-label="다음">&#8250;</button>
+    </div>
+  </section>
+
   <!-- 3가지 이유 (지그재그) -->
   <section class="section alt-bg">
     <div class="container">
