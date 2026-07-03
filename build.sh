@@ -902,11 +902,15 @@ cat <<'EOF'
   <section class="section vch-process" id="process">
     <div class="container">
       <div class="section-head center"><span class="tag">ROADMAP</span><h2 class="section-title">AI의 답이 되기까지, <span class="accent">약 90일</span></h2><p class="section-sub">생성형 엔진이 신뢰 신호를 학습·반영하는 데는 시간이 걸립니다. 하오는 그 여정을 단계로 설계합니다.</p></div>
-      <div class="vch-steps">
-        <div class="vch-step"><span class="vch-step-num">01</span><h3>AI 가시성 진단 <em style="color:var(--orange);font-style:normal;font-size:13px;">~2주</em></h3><p>4대 AI 엔진에서 브랜드가 어떻게 인식·언급되는지, 경쟁사 대비 인용 공백을 진단합니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num">02</span><h3>구조·스키마 정비 <em style="color:var(--orange);font-style:normal;font-size:13px;">~30일</em></h3><p>AI가 읽기 쉬운 페이지 구조·구조화 데이터·엔티티·llms.txt·카피를 정비합니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num">03</span><h3>신뢰 자산 축적 <em style="color:var(--orange);font-style:normal;font-size:13px;">~60일</em></h3><p>언론보도·전문가 칼럼·리뷰 등 AI가 신뢰하는 오프사이트 신호를 본격적으로 쌓습니다.</p></div>
-        <div class="vch-step"><span class="vch-step-num">04</span><h3>인용 측정 & 최적화 <em style="color:var(--orange);font-style:normal;font-size:13px;">~90일</em></h3><p>핵심 질문셋으로 실제 인용·추천 여부를 측정하고, 원하는 결과가 나올 때까지 개선합니다.</p></div>
+      <div class="htl">
+        <span class="htl-line"><span class="htl-line-fill"></span></span>
+        <span class="htl-dot"></span>
+        <div class="htl-steps">
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">01</span><h4>AI 가시성 진단 <em class="htl-when">~2주</em></h4><p>4대 AI 엔진에서 브랜드가 어떻게<br />인식·언급되는지, 경쟁사 대비<br />인용 공백을 진단합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">02</span><h4>구조·스키마 정비 <em class="htl-when">~30일</em></h4><p>AI가 읽기 쉬운 페이지 구조·구조화<br />데이터·엔티티·llms.txt·카피를<br />정비합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">03</span><h4>신뢰 자산 축적 <em class="htl-when">~60일</em></h4><p>언론보도·전문가 칼럼·리뷰 등 AI가<br />신뢰하는 오프사이트 신호를<br />본격적으로 쌓습니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">04</span><h4>인용 측정 &amp; 최적화 <em class="htl-when">~90일</em></h4><p>핵심 질문셋으로 실제 인용·추천<br />여부를 측정하고, 원하는 결과가<br />나올 때까지 개선합니다.</p></div>
+        </div>
       </div>
     </div>
   </section>
