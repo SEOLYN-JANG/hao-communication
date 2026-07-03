@@ -697,7 +697,7 @@ footer_close
 # ---------- AI마케팅 ----------
 {
 head_open "AI마케팅 (AEO·GEO·SEO) | 하오커뮤니케이션" "AI 답변엔진 최적화부터 네이버·구글 검색 상위노출까지, 하오의 AI마케팅."
-banner "AI MARKETING" "AI마케팅 <span class=\"banner-tag\">AEO·GEO·SEO</span>" "검색을 넘어, AI의 답변이 되는 전략"
+banner "AI MARKETING" "AI마케팅 <span class=\"banner-tag\">AEO·GEO·SEO</span>" "검색되는 브랜드에서, AI가 먼저 추천하는 브랜드로"
 cat <<'EOF'
   <section class="section vch-intro">
     <div class="container">
@@ -856,7 +856,7 @@ footer_close
 # ---------- 언론홍보 ----------
 {
 head_open "언론홍보 · AI PR Agent | 하오커뮤니케이션" "AI가 기사거리를 발굴하고 기사화 가능성을 분석해 실제 기사화까지 지원하는 AI 언론홍보 솔루션, AI PR Agent."
-banner "PR &amp; MEDIA" "언론홍보" "AI가 기사거리를 발굴하고, 기사화 가능성을 높입니다"
+banner "PR &amp; MEDIA" "언론홍보" "한 줄의 기사가, 백 개의 광고를 이깁니다"
 cat <<EOF
   <!-- AI 시대의 언론보도 (AEO/GEO 연결) -->
   <section class="section">
@@ -945,7 +945,7 @@ footer_close
 # ---------- SNS마케팅 ----------
 {
 head_open "SNS마케팅 | 하오커뮤니케이션" "인스타·유튜브·틱톡 채널별 콘텐츠와 퍼포먼스 광고로 팬덤을 만드는 하오의 SNS마케팅."
-banner "SNS MARKETING" "SNS마케팅" "사람들이 머무는 곳에 브랜드가 있어야 한다"
+banner "SNS MARKETING" "SNS마케팅" "팔로워 수가 아니라, 매출로 증명합니다"
 cat <<'EOF'
   <!-- 인트로 + 그래프 -->
   <section class="section">
@@ -1048,7 +1048,7 @@ footer_close
 # ---------- 프랜차이즈 ----------
 {
 head_open "프랜차이즈마케팅 | 하오커뮤니케이션" "본사 브랜딩부터 가맹점 모집까지, 확장을 설계하는 하오의 프랜차이즈마케팅."
-banner "FRANCHISE" "프랜차이즈마케팅" "본사 브랜딩부터 가맹점 모집까지"
+banner "FRANCHISE" "프랜차이즈마케팅" "브랜드가 먼저 팔려야, 가맹점이 모입니다"
 cat <<'EOF'
   <section class="section vch-intro">
     <div class="container">
@@ -1117,7 +1117,7 @@ footer_close
 # ---------- 변호사 ----------
 {
 head_open "변호사마케팅 | 하오커뮤니케이션" "법률 규정을 준수하며 상담 전환을 만드는 하오의 변호사마케팅."
-banner "LEGAL" "변호사마케팅" "전문성을 콘텐츠로 증명하다"
+banner "LEGAL" "변호사마케팅" "AI에게 변호사를 물었을 때, 답이 되는 곳"
 cat <<'EOF'
   <section class="section vch-intro">
     <div class="container">
@@ -1685,7 +1685,7 @@ footer_close
 # ---------- 디자인센터 ----------
 {
 head_open "디자인센터 | 하오커뮤니케이션" "로고·브랜딩부터 홈페이지·광고 소재·영상까지, 하오 인하우스 디자인센터."
-banner "DESIGN CENTER" "디자인센터" "마케팅의 첫인상을 완성하다"
+banner "DESIGN CENTER" "디자인센터" "첫인상 3초가, 계약을 결정합니다"
 cat <<'EOF'
   <section class="svc page-svc" id="design">
     <div class="container svc-row">
