@@ -283,7 +283,7 @@ cat <<EOF
           맡은 한 곳의 성과에만 집중하겠다는, 대표의 약속입니다.
         </p>
         <div class="pledge-sign">
-          <span class="pledge-name">하오커뮤니케이션 대표 드림</span>
+          <span class="pledge-name">하오커뮤니케이션 대표 <b>박창민</b></span>
           <span class="pledge-seal">
             <img src="assets/hao-seal.png" alt="하오커뮤니케이션 인장" width="100" height="100" loading="lazy" />
           </span>
@@ -992,6 +992,20 @@ cat <<EOF
     </div>
   </section>
 
+  <!-- 문제 제기 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center"><span class="tag">WHY IT FAILS</span><h2 class="section-title">언론홍보, <span class="accent">이런 경험</span> 있으셨나요?</h2></div>
+      <div class="ac-pain-grid">
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><p>보도자료를 뿌려도 <strong>기사화</strong><br />되지 않고 묻혀버려요.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><p>광고는 하는데 <strong>브랜드 신뢰</strong>가<br />좀처럼 쌓이지 않아요.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span><p>어느 <strong>매체·기자</strong>에게<br />보내야 할지 막막해요.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><p>기사가 나가도 <strong>성과</strong>를<br />어떻게 확인할지 모르겠어요.</p></div>
+      </div>
+      <p class="ac-pain-punch">문제는 <span class="strike">보도자료 개수</span>가 아니라, <strong>뉴스가 되는 앵글</strong>입니다.</p>
+    </div>
+  </section>
+
   <section class="section vch-intro">
     <div class="container">
       <span class="tag">AI PR AGENT</span>
@@ -1092,6 +1106,33 @@ cat <<'EOF'
         </div>
         <div class="sns-stat sns-stat-a"><b>조회수</b><strong>12,540</strong></div>
         <div class="sns-stat sns-stat-b"><b>문의 수</b><strong>+300%</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문제 제기 -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head center"><span class="tag">WHY IT FAILS</span><h2 class="section-title">SNS, <span class="accent">이런 고민</span> 있으셨죠?</h2></div>
+      <div class="ac-pain-grid">
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></span><p>매일 올리는데 <strong>반응이 없고</strong><br />조회수가 늘 제자리예요.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><p>팔로워는 느는데 <strong>매출은</strong><br /><strong>그대로</strong>인 것 같아요.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.82 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></span><p>매번 <strong>뭘 올려야 할지</strong><br />막막하고 손이 안 가요.</p></div>
+        <div class="ac-pain-card"><span class="ac-pain-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span><p>광고를 돌려도 <strong>구매·문의로</strong><br /><strong>전환</strong>되지 않아요.</p></div>
+      </div>
+      <p class="ac-pain-punch">문제는 <span class="strike">게시물 개수</span>가 아니라, <strong>전환되는 구조</strong>입니다.</p>
+    </div>
+  </section>
+
+  <!-- 시장 통계 -->
+  <section class="section ac-stats">
+    <div class="container">
+      <div class="section-head center"><span class="tag">WHY SNS</span><h2 class="section-title">SNS는 이제 <span class="accent">가장 큰 매출 채널</span>입니다</h2></div>
+      <div class="ac-stat-grid">
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="89">0</span><i>%</i></div><p>대한민국<br />SNS 이용률</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="2">0</span><i>배</i></div><p>릴스 도달률<br />(일반 게시물 대비)</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="8.7">0</span><i>%</i></div><p>숏폼 시청 후<br />장바구니 전환 ↑</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="300">0</span><i>%</i></div><p>하오 운영 후<br />평균 문의 증가</p></div>
       </div>
     </div>
   </section>
