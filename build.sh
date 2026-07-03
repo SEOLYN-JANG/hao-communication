@@ -284,24 +284,8 @@ cat <<EOF
         </p>
         <div class="pledge-sign">
           <span class="pledge-name">하오커뮤니케이션 대표 드림</span>
-          <span class="pledge-seal" aria-label="하오커뮤니케이션 인장">
-            <svg viewBox="0 0 200 200" role="img" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <filter id="sealRough" x="-15%" y="-15%" width="130%" height="130%">
-                  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
-                  <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
-                </filter>
-              </defs>
-              <g filter="url(#sealRough)">
-                <rect x="13" y="13" width="174" height="174" rx="16" fill="#fff" stroke="#b5221b" stroke-width="9"/>
-                <line x1="100" y1="22" x2="100" y2="178" stroke="#b5221b" stroke-width="2.2" opacity=".5"/>
-                <line x1="22" y1="100" x2="178" y2="100" stroke="#b5221b" stroke-width="2.2" opacity=".5"/>
-                <g fill="#b5221b" font-family="'Black Han Sans',sans-serif" font-size="33" text-anchor="middle">
-                  <text x="139" y="59">하</text><text x="139" y="98">오</text><text x="139" y="137">커</text><text x="139" y="176">뮤</text>
-                  <text x="61" y="59">니</text><text x="61" y="98">케</text><text x="61" y="137">이</text><text x="61" y="176">션</text>
-                </g>
-              </g>
-            </svg>
+          <span class="pledge-seal">
+            <img src="assets/hao-seal.png" alt="하오커뮤니케이션 인장" width="100" height="100" loading="lazy" />
           </span>
         </div>
       </div>
