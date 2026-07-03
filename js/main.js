@@ -202,7 +202,7 @@
 
   /* ---------- 4. SCROLL reveal ---------- */
   const revealEls = document.querySelectorAll(
-    ".section-head, .about-lead, .stat, .svc-info, .svc-visual, .contact-form, .s-card, .why-card, .vch-step, .vch-prod, .vch-amt, .vch-table-wrap, .vch-example"
+    ".section-head, .about-lead, .stat, .svc-info, .svc-visual, .contact-form, .s-card, .why-card, .vch-step, .vch-prod, .vch-amt, .vch-table-wrap, .vch-example, .webaeo-card, .webaeo-q"
   );
   revealEls.forEach((el) => el.classList.add("reveal"));
   const io = new IntersectionObserver(

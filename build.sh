@@ -345,6 +345,29 @@ $steps_html      </div>
 EOF
 }
 
+# 홈페이지 제작 + SEO·AEO·GEO 밴드. 사용법: webaeo_band "업종" "AI질문예시" "인트로문장"
+webaeo_band() {
+  local subject="$1" query="$2" intro="$3"
+cat <<EOF
+  <section class="section webaeo">
+    <div class="container">
+      <div class="section-head center"><span class="tag">WEBSITE · SEO · AEO · GEO</span><h2 class="section-title">검색과 AI가 먼저 찾는<br /><span class="accent">$subject 홈페이지</span>를 만듭니다</h2><p class="section-sub">$intro</p></div>
+      <div class="webaeo-q">
+        <span class="webaeo-q-user">"$query"</span>
+        <span class="webaeo-q-arrow">&#8594;</span>
+        <span class="webaeo-q-ai">AI의 답에 <strong>우리 $subject</strong> 이름이 나오도록</span>
+      </div>
+      <div class="webaeo-grid">
+        <div class="webaeo-card"><span class="webaeo-k">SEO</span><h4>검색 노출 최적화</h4><p>네이버·구글 검색에서 우리 $subject 홈페이지가 상단에 노출되도록 사이트 구조·콘텐츠·키워드를 설계합니다.</p></div>
+        <div class="webaeo-card"><span class="webaeo-k">AEO</span><h4>AI 답변 노출</h4><p>ChatGPT·Perplexity가 답할 때 우리 $subject 홈페이지를 근거로 인용·추천하도록 콘텐츠와 신뢰 신호를 만듭니다.</p></div>
+        <div class="webaeo-card"><span class="webaeo-k">GEO</span><h4>생성형 엔진 최적화</h4><p>구조화 데이터·엔티티·llms.txt 정비로 생성형 AI가 우리 브랜드를 정확히 학습·신뢰하게 만듭니다.</p></div>
+      </div>
+      <p class="webaeo-note">단순한 홈페이지가 아니라, <strong>검색과 AI에 발견되는 구조</strong>로 처음부터 설계합니다.</p>
+    </div>
+  </section>
+EOF
+}
+
 # 숫자 통계 밴드 (스크롤 시 카운팅 애니메이션)
 stats_band() {
 cat <<'EOF'
@@ -1352,6 +1375,7 @@ cat <<'EOF'
   </section>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"가맹문의는 오는데 계약이 안 됩니다. 왜인가요?","acceptedAnswer":{"@type":"Answer","text":"문의 수와 진성 계약은 다릅니다. 창업 의지가 낮은 DB에 광고비를 쓰면 상담만 늘고 계약은 안 됩니다. 하오는 진성 타깃 DB 설계와 개인화 상담, 랜딩 전환으로 실제 계약률을 끌어올립니다."}},{"@type":"Question","name":"이제 막 시작하는 브랜드도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네. 브랜드 기획 단계부터 함께합니다. 아이템·컨셉 정립, 수익구조와 본사 지원 설계부터 시작해 팔리는 확장의 토대를 만들어 드립니다."}},{"@type":"Question","name":"프랜차이즈 브랜딩부터 새로 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"현재 브랜드 상태를 먼저 진단한 뒤 필요한 부분만 보완합니다. CI·BI, 매장 컨셉, 가맹 홈페이지, 채널 정비 중 우선순위를 정해 진행합니다."}},{"@type":"Question","name":"가맹점 모집까지 전 과정을 맡길 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"네. 본사 브랜딩부터 진성 DB 광고, 가맹 모집 홈페이지와 랜딩, 상담 전환까지 원스톱으로 실제 가맹 계약으로 이어지는 전 과정을 지원합니다."}},{"@type":"Question","name":"프랜차이즈 마케팅 비용은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"브랜드 상황과 필요한 범위에 따라 맞춤 견적으로 안내드립니다. 먼저 무료 상담으로 현황 진단부터 받아보세요."}}]}</script>
 EOF
+webaeo_band "프랜차이즈 브랜드" "창업하기 좋은 프랜차이즈 추천해줘" "예비 점주는 이제 포털 검색과 AI에게 '어떤 브랜드가 좋냐'고 묻습니다. 그 답에 우리 브랜드가 있어야 진짜 문의로 이어집니다."
 pledge_band
 cta_band
 footer_close
@@ -1505,6 +1529,7 @@ cat <<'EOF'
   </section>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"변호사 마케팅, 꼭 해야 할까요?","acceptedAnswer":{"@type":"Answer","text":"변호사 4만 명 시대, 의뢰인은 검색과 AI로 변호사를 찾고 비교합니다. 검색에 보이지 않으면 아무리 뛰어난 실력도 선택지에 오르지 못합니다. 마케팅은 선택이 아니라 노출의 기본이 되었습니다."}},{"@type":"Question","name":"변호사 마케팅, 무엇부터 시작해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"모든 채널을 동시에 시작하면 힘이 분산됩니다. 국내 검색의 62.9%를 차지하는 네이버 블로그(전문 콘텐츠)부터 쌓고, 플레이스·독립 홈페이지·AI 검색으로 확장하는 것이 정석입니다."}},{"@type":"Question","name":"변호사 블로그, 정말 효과가 있나요?","acceptedAnswer":{"@type":"Answer","text":"있습니다. 단, 저가 외주 짜깁기 글로는 순위도 신뢰도 얻지 못합니다. 실제 의뢰인이 검색하는 질문을 제목으로, 사례·전문성을 담은 콘텐츠만이 상담으로 이어집니다. 보통 1~3개월에 유입, 6개월에 오가닉 상담 구조가 형성됩니다."}},{"@type":"Question","name":"변호사 광고 규정 위반이 걱정됩니다.","acceptedAnswer":{"@type":"Answer","text":"변호사법과 광고 규정을 숙지한 상태로 콘텐츠·광고를 설계합니다. 규정 준수를 전제로 안전하게 진행해 리스크를 사전에 차단합니다."}},{"@type":"Question","name":"AI 검색(ChatGPT·Perplexity)에도 노출되나요?","acceptedAnswer":{"@type":"Answer","text":"네. 구조화된 FAQ·프로필·스키마와 독립 홈페이지 SEO로 AEO·GEO 최적화를 진행해, AI 답변에서 신뢰 변호사로 인용되도록 설계합니다."}}]}</script>
 EOF
+webaeo_band "법률사무소" "이혼 잘하는 변호사 추천해줘" "의뢰인은 급할 때 검색하고, 이제는 AI에게 변호사를 묻습니다. 그 답에 우리가 있어야 실제 선임으로 이어집니다."
 pledge_band
 cta_band
 footer_close
@@ -1686,6 +1711,7 @@ faq_section "병원마케팅 <span class=\"accent\">자주 묻는 질문</span>"
   "의료광고 심의는 문제없나요?" "의료광고 심의 기준을 준수하는 범위에서 콘텐츠와 노출을 설계하므로 안심하셔도 됩니다." \
   "효과는 언제부터 나타나나요?" "검색·플레이스는 비교적 빠르게, AI 인용은 신뢰 신호가 쌓이는 60~90일 내에 변화가 나타납니다." \
   "우리 병원 현황을 먼저 알 수 있나요?" "네. 무료 AI 가시성 진단으로 지금 우리 병원이 검색과 AI에서 어떻게 노출되는지 확인해 드립니다."
+webaeo_band "병원" "이 근처 잘하는 병원 어디야?" "환자는 네이버에서 검색하고, 이제 ChatGPT에게 병원을 묻습니다. 검색과 AI 모두에서 발견되는 홈페이지가 필요합니다."
 pledge_band
 cta_band
 footer_close
@@ -1853,6 +1879,7 @@ faq_section "학원마케팅 <span class=\"accent\">자주 묻는 질문</span>"
   "블로그만으로는 부족한가요?" "블로그는 기본입니다. 플레이스·검색광고·AI 검색까지 함께 잡아야 실제 등록으로 연결됩니다." \
   "어떤 학원에 맞나요?" "보습·입시·예체능·유학·온라인 클래스 등 지역과 과목 기반 교육 사업 전반에 맞습니다." \
   "성과는 어떻게 확인하나요?" "노출·조회가 아니라 문의·상담·실제 원생 등록까지 추적해 리포트로 보고드립니다."
+webaeo_band "학원" "우리 동네 수학 학원 추천해줘" "학부모는 검색과 맘카페, 그리고 이제 AI로 학원을 찾습니다. 검색과 AI에 발견되지 않으면 등록으로 이어지지 않습니다."
 pledge_band
 cta_band
 footer_close
