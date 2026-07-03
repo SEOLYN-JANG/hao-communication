@@ -246,8 +246,8 @@ EOF
 
 # ---------------- 공통: CTA 밴드 ----------------
 cta_band() {
-  local title="${1:-지금, 브랜드의 다음을<br />시작하세요}"
-  local sub="${2:-검색과 AI, 두 흐름에서 발견되고 선택되는 브랜드로.<br />하오커뮤니케이션이 그 다음을 설계합니다.}"
+  local title="${1:-검색에서 발견되지 않으면,<br />존재하지 않는 것과 같습니다.}"
+  local sub="${2:-광고비 없이도 고객이 찾아오는 구조, SEO·AEO·GEO 최적화로 만들 수 있습니다.<br />15년 경력의 하오커뮤니케이션이 사이트를 진단하고, 검색에서 발견되는 구조로 바꿔드립니다.}"
 cat <<EOF
   <section class="cta-band">
     <div class="container cta-grid">
@@ -697,7 +697,7 @@ cat <<'EOF'
     </div>
   </section>
 EOF
-cta_band "브랜드의 다음을,<br />하오와 함께 설계하세요" "검색·AI·언론까지, 발견되고 선택되는 브랜드로.<br />하오커뮤니케이션이 그 여정을 함께합니다."
+cta_band
 footer_close
 } > about.html
 
@@ -856,7 +856,7 @@ cat <<'EOF'
   }
   </script>
 EOF
-cta_band "AI가 먼저 추천하는<br />브랜드가 되세요" "지금 우리 브랜드가 AI 답변에 나오는지,<br />무료로 진단해 드립니다."
+cta_band
 footer_close
 } > ai-marketing.html
 
@@ -945,7 +945,7 @@ cat <<EOF
     </div>
   </section>
 EOF
-cta_band "한 줄의 기사로<br />신뢰를 만드세요" "뉴스가 될 이야기를 발굴해,<br />검색과 AI가 신뢰하는 브랜드로 만듭니다."
+cta_band
 footer_close
 } > pr.html
 
@@ -1117,7 +1117,7 @@ cat <<'EOF'
     </div>
   </section>
 EOF
-cta_band "가맹점이 모이는<br />브랜드를 만드세요" "본사 브랜딩부터 가맹점 모집까지,<br />브랜드의 확장을 설계합니다."
+cta_band
 footer_close
 } > franchise.html
 
@@ -1186,7 +1186,7 @@ cat <<'EOF'
     </div>
   </section>
 EOF
-cta_band "의뢰인이 먼저 찾는<br />변호사가 되세요" "검색과 AI 답변에서 신뢰받는<br />전문가로 포지셔닝합니다."
+cta_band
 footer_close
 } > lawyer.html
 
@@ -1361,7 +1361,7 @@ cat <<'EOF'
     </div>
   </section>
 EOF
-cta_band "환자가 먼저 찾는<br />병원이 되세요" "AI 답변에 우리 병원이 답이 되도록,<br />지금 무료로 진단받으세요."
+cta_band
 footer_close
 } > hospital.html
 
@@ -1518,7 +1518,7 @@ cat <<'EOF'
     </div>
   </section>
 EOF
-cta_band "등록으로 이어지는<br />학원 마케팅을 시작하세요" "포스팅 개수가 아니라,<br />실제 원생 등록으로 증명합니다."
+cta_band
 footer_close
 } > academy.html
 
@@ -1685,7 +1685,7 @@ cat <<'EOF'
     </div>
   </section>
 EOF
-cta_band "정부지원금으로<br />마케팅을 시작하세요" "수출바우처 공식 수행기관 하오가,<br />자격 확인부터 성과까지 안내합니다."
+cta_band
 footer_close
 } > gov.html
 
@@ -1718,7 +1718,7 @@ cat <<'EOF'
   </section>
 EOF
 why_band
-cta_band "첫인상으로<br />계약을 만드세요" "브랜드의 첫 3초를 완성하는 디자인,<br />하오 디자인센터가 함께합니다."
+cta_band
 footer_close
 } > design.html
 
@@ -1783,7 +1783,7 @@ cat <<'EOF'
     </div>
   </section>
 EOF
-cta_band "다음 성공사례의<br />주인공이 되세요" "하오와 함께한 브랜드처럼,<br />당신의 브랜드도 성장시켜 드립니다."
+cta_band
 footer_close
 } > portfolio.html
 
