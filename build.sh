@@ -288,6 +288,37 @@ $html      </div>
 EOF
 }
 
+# 숫자 통계 밴드 (스크롤 시 카운팅 애니메이션)
+stats_band() {
+cat <<'EOF'
+  <section class="section ac-stats">
+    <div class="container">
+      <div class="section-head center"><span class="tag">HAO BY NUMBERS</span><h2 class="section-title">숫자가 증명하는 <span class="accent">하오의 실력</span></h2></div>
+      <div class="ac-stat-grid">
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="15">0</span><i>년</i></div><p>브랜드를 키워온<br />업력</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="12500">0</span><i>건+</i></div><p>누적 수행<br />프로젝트</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="98">0</span><i>%</i></div><p>다시 찾아주신<br />재의뢰율</p></div>
+        <div class="ac-stat"><div class="ac-stat-num"><span data-count="6700">0</span><i>+</i></div><p>함께 성장한<br />고객사</p></div>
+      </div>
+    </div>
+  </section>
+EOF
+}
+
+# 다크 강조 밴드 (임팩트 메시지). 사용법: punch_band "제목(HTML)" "부제"
+punch_band() {
+  local t="$1" s="$2"
+cat <<EOF
+  <section class="section ac-claim">
+    <div class="container ac-claim-inner">
+      <span class="tag light">WHY HAO</span>
+      <h2 class="ac-claim-title">$t</h2>
+      <p class="ac-claim-sub">$s</p>
+    </div>
+  </section>
+EOF
+}
+
 # ---------------- 칼럼(SEO/AEO) 자동 생성 ----------------
 meta_get() { sed -n "s/^$2:[[:space:]]*//p" "$1" | head -1; }
 
@@ -963,6 +994,8 @@ faq_section "언론홍보 <span class=\"accent\">자주 묻는 질문</span>" \
   "언론보도가 AI 추천에도 도움이 되나요?" "네. AI는 정식 등록 언론 매체의 기사에 가장 높은 가중치를 둡니다. 언론보도는 AI가 브랜드를 신뢰 근거로 인용하게 만드는 핵심 자산입니다." \
   "보도자료만 쓰면 기사가 되나요?" "뉴스 가치가 있어야 합니다. 하오는 기사거리를 발굴하고 기사화 가능성을 판단한 뒤 매체를 선별해 노출합니다." \
   "성과는 어떻게 확인하나요?" "포털 노출과 기사화 여부를 추적하고 결과를 데이터로 보고드립니다."
+stats_band
+punch_band "언론은 사는 게 아니라,<br /><span class=\"accent\">만드는</span> 것입니다" "광고는 우리가 말하지만, 기사는 세상이 증명합니다.<br />하오는 뉴스가 되는 이야기를 발굴해, 신뢰를 자산으로 만듭니다."
 cta_band
 footer_close
 } > pr.html
@@ -1072,6 +1105,8 @@ faq_section "SNS마케팅 <span class=\"accent\">자주 묻는 질문</span>" \
   "어떤 채널부터 시작해야 하나요?" "업종과 고객층에 따라 다릅니다. 인스타그램·유튜브·틱톡·네이버 중 우리 브랜드에 맞는 채널을 진단해 우선순위를 정합니다." \
   "콘텐츠 제작도 대행해 주나요?" "네. 기획부터 촬영·디자인·카피·편집까지 자체 팀이 제작하고, 반응 데이터로 지속 최적화합니다." \
   "광고비는 어느 정도 필요한가요?" "목표와 업종에 따라 다릅니다. 무료 상담에서 예상 예산과 기대 효과를 함께 설계해 드립니다."
+stats_band
+punch_band "팔로워가 아니라,<br /><span class=\"accent\">매출</span>을 남깁니다" "스크롤을 멈추게 하는 콘텐츠와 지갑을 여는 전략.<br />하오는 '보이는 성과'만 남기는 SNS 마케팅을 합니다."
 footer_close
 } > sns.html
 
@@ -1141,6 +1176,8 @@ cat <<'EOF'
   </section>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"이제 막 시작하는 브랜드도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네. 브랜드 기획 단계부터 함께합니다. 아이템·컨셉 정립, 수익구조 설계부터 시작해 확장의 토대를 만들어 드립니다."}},{"@type":"Question","name":"가맹점 모집까지 도와주나요?","acceptedAnswer":{"@type":"Answer","text":"가맹 모집 홈페이지 제작, DB 광고, 상담 전환 설계까지 실제 가맹 계약으로 이어지는 전 과정을 지원합니다."}},{"@type":"Question","name":"비용은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"브랜드 상황과 필요한 범위에 따라 맞춤 견적으로 안내드립니다. 먼저 무료 상담으로 진단부터 받아보세요."}}]}</script>
 EOF
+stats_band
+punch_band "브랜드가 팔려야,<br />가맹점이 모입니다" "예비 창업자는 매출이 아니라 '믿음'을 보고 결정합니다.<br />하오는 본사 브랜딩부터 가맹 모객까지, 그 믿음을 설계합니다."
 cta_band
 footer_close
 } > franchise.html
@@ -1211,6 +1248,8 @@ cat <<'EOF'
   </section>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"변호사 마케팅, 꼭 해야 할까요?","acceptedAnswer":{"@type":"Answer","text":"경쟁이 치열해질수록 의뢰인은 검색으로 변호사를 찾습니다. 검색 결과에 보이지 않으면 선택지에 들어가지 못합니다. 마케팅은 선택이 아니라 노출의 기본이 되었습니다."}},{"@type":"Question","name":"변호사 블로그, 효과가 있나요?","acceptedAnswer":{"@type":"Answer","text":"있습니다. 단, 제대로 해야 합니다. 분야 전문성과 검색 구조를 갖춘 블로그만이 신뢰와 상담으로 이어집니다."}},{"@type":"Question","name":"광고 규정 위반이 걱정됩니다.","acceptedAnswer":{"@type":"Answer","text":"변호사법과 광고 규정을 숙지한 상태로 콘텐츠·광고를 설계합니다. 규정 준수를 전제로 안전하게 진행합니다."}}]}</script>
 EOF
+stats_band
+punch_band "실력은 기본,<br />선택은 <span class=\"accent\">브랜딩</span>입니다" "의뢰인은 검색과 AI로 변호사를 고릅니다.<br />보이지 않으면, 아무리 뛰어난 실력도 전달되지 않습니다."
 cta_band
 footer_close
 } > lawyer.html
@@ -1758,6 +1797,8 @@ faq_section "디자인센터 <span class=\"accent\">자주 묻는 질문</span>"
   "마케팅과 함께하면 뭐가 좋나요?" "브랜드 톤이 일관되게 유지되고, 디자인이 곧바로 광고·콘텐츠 성과로 이어집니다." \
   "작업 기간은 얼마나 걸리나요?" "범위에 따라 다르며, 상담 시 항목별 일정과 산출물을 명확히 안내해 드립니다." \
   "수정은 몇 번까지 되나요?" "합의된 범위 내에서 충분히 반영하며, 시작 전 수정 정책을 투명하게 안내합니다."
+stats_band
+punch_band "첫인상 3초가,<br /><span class=\"accent\">계약</span>을 만듭니다" "고객은 3초 안에 신뢰할지 말지를 결정합니다.<br />하오 디자인센터가 그 결정적인 3초를 완성합니다."
 cta_band
 footer_close
 } > design.html
