@@ -451,16 +451,22 @@ echo "▶ 페이지 생성 중..."
 {
 head_open "하오커뮤니케이션 | 좋은 사람들이 가치를 만드는 기업" "AI마케팅·언론홍보·SNS·업종별 마케팅까지. 성과로 증명하는 통합 마케팅 파트너, 하오커뮤니케이션."
 cat <<EOF
-  <section class="hero hero-orbs" id="hero">
-    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+  <section class="hero" id="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-new-poster.jpg">
+      <source src="assets/hero-new.mp4" type="video/mp4" />
+    </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">WE MAKE HAO VALUE</p>
-      <h1 class="hero-title hero-title-en">Be found.<br /><span class="accent">Be chosen.</span></h1>
-      <p class="hero-desc">검색되는 홈페이지, AI가 답하는 브랜드.<br />하오커뮤니케이션은 <strong>발견되고 선택되는</strong> 마케팅을 설계합니다.</p>
+      <p class="hero-eyebrow">THE AI SEARCH ERA · AEO · GEO</p>
+      <h1 class="hero-title">검색을 넘어,<br />AI가 먼저 <span class="accent">추천</span>하는 브랜드</h1>
+      <p class="hero-desc">사람도, AI도 당신의 브랜드를 '답'으로 선택하게.<br />하오커뮤니케이션은 검색·AI·언론을 하나로 묶어 <strong>발견되고 선택되는</strong> 마케팅을 설계합니다.</p>
       <div class="hero-actions">
-        <a href="contact.html" class="btn btn-primary">무료 상담 받기</a>
-        <a href="#services" class="btn btn-ghost">전문 분야 보기 ↓</a>
+        <a href="ai-marketing.html" class="btn btn-primary">무료 AI 노출 진단</a>
+        <a href="portfolio.html" class="btn btn-ghost">성공사례 보기 →</a>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-trust-label">함께한 브랜드</span>
+        <span>서울우유</span><i>·</i><span>오뚜기</span><i>·</i><span>LEDVANCE</span><i>·</i><span>칠곡경북대학교병원</span><i>·</i><span>한국안광학산업진흥원</span>
       </div>
     </div>
     <div class="hero-scroll"><span>SCROLL</span><div class="scroll-line"></div></div>
