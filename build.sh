@@ -993,6 +993,9 @@ cat <<'EOF'
     </div>
   </section>
 
+EOF
+pledge_band
+cat <<'EOF'
   <!-- FAQ -->
   <section class="section alt-bg">
     <div class="container aeo-faq-wrap">
@@ -1020,7 +1023,6 @@ cat <<'EOF'
   }
   </script>
 EOF
-pledge_band
 cta_band
 footer_close
 } > ai-marketing.html
@@ -1239,7 +1241,6 @@ cat <<'EOF'
   </section>
 
 EOF
-aeo_mock_band "브랜드" "우리 브랜드" "요즘 뜨는 OO 브랜드 추천해줘" "인스타 43만 도달 · 재구매율 높음 · 리뷰 다수" "OO브랜드" "대형 광고 집행" "OO샵" "신생 브랜드"
 pledge_band
 faq_section "SNS마케팅 <span class=\"accent\">자주 묻는 질문</span>" \
   "팔로워가 적어도 효과가 있나요?" "네. 팔로워 수보다 콘텐츠의 확산력과 타깃 정확도가 매출을 좌우합니다. 하오는 적은 팔로워로도 전환되는 콘텐츠 구조를 설계합니다." \
@@ -1949,7 +1950,6 @@ cat <<'EOF'
   </section>
 
 EOF
-aeo_mock_band "수행기관" "하오커뮤니케이션" "수출바우처 잘하는 수행기관 추천해줘" "공식 수행기관 · 마케팅 전문 · 다수 수행 경험" "OO에이전시" "일반 대행 · 바우처 경험 적음" "OO컨설팅" "컨설팅 위주"
 cat <<'EOF'
   <!-- ───────── 또 다른 정부지원: 중소기업 혁신바우처 ───────── -->
   <section class="section alt-bg">
@@ -2045,6 +2045,9 @@ cat <<'EOF'
       </div>
     </div>
   </section>
+EOF
+pledge_band
+cat <<'EOF'
   <!-- 수출바우처 FAQ (AEO) -->
   <section class="section">
     <div class="container aeo-faq-wrap">
@@ -2113,6 +2116,7 @@ htl_band "진행 과정" \
   "인쇄 · 납품|인쇄와 후가공을 진행한 뒤\n완성된 결과물을 납품합니다."
 why_band
 aeo_mock_band "디자인 파트너" "하오 디자인센터" "상세페이지 잘 만드는 곳 추천해줘" "브랜딩~상세~영상 원스톱 · 전환율 중심 설계" "OO디자인" "템플릿 위주 작업" "프리랜서" "단건 작업"
+pledge_band
 faq_section "디자인센터 <span class=\"accent\">자주 묻는 질문</span>" \
   "디자인만 따로 의뢰할 수 있나요?" "네. 로고·CI/BI, 상세페이지, 홍보물, 홈페이지 등 필요한 디자인만 단독으로 진행할 수 있습니다." \
   "마케팅과 함께하면 뭐가 좋나요?" "브랜드 톤이 일관되게 유지되고, 디자인이 곧바로 광고·콘텐츠 성과로 이어집니다." \
