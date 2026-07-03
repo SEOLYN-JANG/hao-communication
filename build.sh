@@ -1286,6 +1286,12 @@ cat <<'EOF'
       </div>
       <button class="hx-arrow hx-next" type="button" aria-label="다음">&#8250;</button>
     </div>
+    <div class="hx-dots" role="tablist">
+      <button class="hx-dot is-active" data-i="0" aria-label="1번 카드"><span>1</span></button>
+      <button class="hx-dot" data-i="1" aria-label="2번 카드"><span>2</span></button>
+      <button class="hx-dot" data-i="2" aria-label="3번 카드"><span>3</span></button>
+      <button class="hx-dot" data-i="3" aria-label="4번 카드"><span>4</span></button>
+    </div>
   </section>
 
   <!-- 3가지 이유 (지그재그) -->

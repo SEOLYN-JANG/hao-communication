@@ -440,26 +440,74 @@
     render();
   }
 
-  /* ---------- 9. HOSPITAL 검색→AI 가로 스크롤 ---------- */
+  /* ---------- 9. HOSPITAL 검색→AI 가로 스크롤 (인디케이터 + 오토플레이) ---------- */
   const hx = document.querySelector(".hx-carousel");
   if (hx) {
+    const sec = hx.closest(".hx-sec");
     const track = hx.querySelector(".hx-track");
     const prev = hx.querySelector(".hx-prev");
     const next = hx.querySelector(".hx-next");
-    const step = () => {
-      const card = track.querySelector(".hx-card");
-      const gap = parseFloat(getComputedStyle(track).columnGap || "24") || 24;
-      return card ? card.getBoundingClientRect().width + gap : 380;
+    const cards = Array.prototype.slice.call(track.querySelectorAll(".hx-card"));
+    const dots = Array.prototype.slice.call((sec || hx).querySelectorAll(".hx-dot"));
+    const DELAY = 5000;
+    let timer = null;
+
+    const activeIndex = () => {
+      const mid = track.scrollLeft + track.clientWidth / 2;
+      let best = 0, bd = Infinity;
+      cards.forEach((c, i) => {
+        const cc = c.offsetLeft + c.offsetWidth / 2;
+        const d = Math.abs(cc - mid);
+        if (d < bd) { bd = d; best = i; }
+      });
+      return best;
     };
-    const upd = () => {
+
+    const goTo = (i) => {
+      i = (i + cards.length) % cards.length;
+      cards[i].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+    };
+
+    const syncDots = () => {
+      const idx = activeIndex();
+      dots.forEach((d, i) => {
+        const on = i === idx;
+        // is-active 재부여로 진행바 애니메이션 재시작
+        if (on && !d.classList.contains("is-active")) {
+          d.classList.remove("is-active");
+          void d.offsetWidth;
+        }
+        d.classList.toggle("is-active", on);
+      });
       const max = track.scrollWidth - track.clientWidth - 2;
       prev.classList.toggle("is-disabled", track.scrollLeft <= 2);
       next.classList.toggle("is-disabled", track.scrollLeft >= max);
     };
-    prev.addEventListener("click", () => track.scrollBy({ left: -step(), behavior: "smooth" }));
-    next.addEventListener("click", () => track.scrollBy({ left: step(), behavior: "smooth" }));
-    track.addEventListener("scroll", upd, { passive: true });
-    window.addEventListener("resize", upd);
-    upd();
+
+    const stop = () => { if (timer) { clearInterval(timer); timer = null; } if (sec) sec.classList.add("is-paused"); };
+    const play = () => { stop(); if (sec) sec.classList.remove("is-paused"); timer = setInterval(() => goTo(activeIndex() + 1), DELAY); };
+
+    prev.addEventListener("click", () => { goTo(activeIndex() - 1); play(); });
+    next.addEventListener("click", () => { goTo(activeIndex() + 1); play(); });
+    dots.forEach((d) => d.addEventListener("click", () => { goTo(+d.dataset.i); play(); }));
+
+    let ticking = false;
+    track.addEventListener("scroll", () => {
+      if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; syncDots(); }); }
+    }, { passive: true });
+    window.addEventListener("resize", syncDots);
+
+    // 마우스 올리면 정지, 벗어나면 재생
+    hx.addEventListener("mouseenter", stop);
+    hx.addEventListener("mouseleave", play);
+
+    // 화면에 보일 때만 오토플레이
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((es) => {
+        es.forEach((e) => { if (e.isIntersecting) play(); else stop(); });
+      }, { threshold: 0.25 }).observe(hx);
+    } else { play(); }
+
+    syncDots();
   }
 })();

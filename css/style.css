@@ -235,23 +235,23 @@ br.br-pc { display: inline; }
 }
 .hx-track::-webkit-scrollbar { display: none; }
 .hx-card {
-  position: relative; flex: 0 0 clamp(300px, 40vw, 440px); scroll-snap-align: center;
-  background: #fff; border: 1px solid var(--line); border-radius: 26px;
-  padding: 34px 34px 40px; overflow: hidden;
-  box-shadow: 0 20px 50px -30px rgba(14,14,18,.35);
+  position: relative; flex: 0 0 clamp(330px, 46vw, 520px); scroll-snap-align: center;
+  background: #fff; border: 1px solid var(--line); border-radius: 30px;
+  padding: 42px 42px 50px; overflow: hidden;
+  box-shadow: 0 24px 56px -30px rgba(14,14,18,.38);
   transition: transform .35s var(--ease), box-shadow .35s var(--ease);
 }
 .hx-card:hover { transform: translateY(-6px); box-shadow: 0 34px 62px -28px rgba(14,14,18,.42); }
 .hx-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
 .hx-badge {
-  width: 54px; height: 54px; border-radius: 16px; background: var(--hc); color: #fff;
-  display: flex; align-items: center; justify-content: center; font-size: 25px;
+  width: 60px; height: 60px; border-radius: 18px; background: var(--hc); color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 28px;
   box-shadow: 0 14px 26px -12px var(--hc);
 }
-.hx-cat { font-size: 11.5px; font-weight: 800; letter-spacing: 2px; color: var(--gray); }
-.hx-title { font-size: clamp(23px, 2.6vw, 29px); font-weight: 800; letter-spacing: -.8px; margin: 0 0 12px; }
+.hx-cat { font-size: 12px; font-weight: 800; letter-spacing: 2px; color: var(--gray); }
+.hx-title { font-size: clamp(26px, 2.9vw, 33px); font-weight: 800; letter-spacing: -.8px; margin: 0 0 14px; }
 .hx-title span { color: var(--hc); }
-.hx-quote { font-size: 14.5px; line-height: 1.65; color: var(--gray); margin: 0 0 26px; min-height: 3em; }
+.hx-quote { font-size: 15.5px; line-height: 1.65; color: var(--gray); margin: 0 0 28px; min-height: 3em; }
 
 .hx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .hx-ic {
@@ -273,7 +273,7 @@ br.br-pc { display: inline; }
 .hx-steps strong { display: block; font-size: 14px; font-weight: 800; margin-bottom: 3px; letter-spacing: -.3px; }
 .hx-steps em { font-style: normal; font-size: 12.5px; line-height: 1.5; color: var(--gray); }
 
-.hx-num { position: absolute; right: 24px; bottom: 12px; font-size: 84px; font-weight: 900; color: var(--hc); opacity: .1; line-height: 1; letter-spacing: -3px; }
+.hx-num { position: absolute; right: 28px; bottom: 14px; font-size: 100px; font-weight: 900; color: var(--hc); opacity: .1; line-height: 1; letter-spacing: -4px; }
 
 /* 카드4 (다크) + 흐름도 */
 .hx-card-dark { background: linear-gradient(160deg, #1a2233, #0e0e12); border-color: transparent; }
@@ -310,7 +310,27 @@ br.br-pc { display: inline; }
 .hx-arrow:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
 .hx-prev { left: 14px; } .hx-next { right: 14px; }
 .hx-arrow.is-disabled { opacity: 0; pointer-events: none; }
-@media (max-width: 620px) { .hx-num { font-size: 62px; } .hx-arrow { width: 42px; height: 42px; font-size: 20px; } .hx-quote { min-height: 0; } }
+
+/* 순서 인디케이터 (1·2·3·4) + 진행바 */
+.hx-dots { display: flex; justify-content: center; gap: 10px; margin-top: 30px; }
+.hx-dot {
+  position: relative; width: 44px; height: 44px; border-radius: 50%; overflow: hidden;
+  border: 1.5px solid var(--line); background: #fff;
+  font-family: inherit; font-weight: 800; font-size: 15px; color: var(--gray);
+  cursor: pointer; transition: color .25s var(--ease), border-color .25s var(--ease);
+}
+.hx-dot:hover { border-color: var(--ink); color: var(--ink); }
+.hx-dot span { position: relative; z-index: 1; }
+.hx-dot.is-active { color: #fff; border-color: var(--orange); box-shadow: 0 8px 18px -8px var(--orange); }
+.hx-dot.is-active::before {
+  content: ""; position: absolute; inset: 0; background: var(--orange); z-index: 0;
+  transform: scaleX(0); transform-origin: left; animation: hxFill 5s linear forwards;
+}
+.hx-dot.is-active.no-anim::before { animation: none; transform: scaleX(1); }
+.hx-sec.is-paused .hx-dot.is-active::before { animation-play-state: paused; }
+@keyframes hxFill { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (max-width: 620px) { .hx-num { font-size: 68px; } .hx-arrow { width: 42px; height: 42px; font-size: 20px; } .hx-quote { min-height: 0; } .hx-dot { width: 40px; height: 40px; } }
 
 .hero-scroll {
   position: absolute; bottom: 34px; left: 50%; transform: translateX(-50%); z-index: 3;
