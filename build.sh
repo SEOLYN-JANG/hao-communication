@@ -1291,11 +1291,15 @@ cat <<'EOF'
   <section class="section" id="process">
     <div class="container">
       <div class="section-head center"><span class="tag">FUNNEL</span><h2 class="section-title">문의가 아니라, <span class="accent">계약</span>으로</h2><p class="section-sub">진성 DB부터 계약·재확장까지, 새지 않는 가맹 전환 구조를 만듭니다.</p></div>
-      <div class="ac-proc-grid">
-        <div class="ac-proc-step"><span class="ac-proc-n">01</span><h4>진성 DB 확보</h4><p>창업 의지가 높은 예비 점주만 정밀 타깃으로 모읍니다.</p></div>
-        <div class="ac-proc-step"><span class="ac-proc-n">02</span><h4>개인화 상담</h4><p>수익성·본사 지원·차별성을 근거로 신뢰를 쌓는 상담을 설계합니다.</p></div>
-        <div class="ac-proc-step"><span class="ac-proc-n">03</span><h4>계약 전환</h4><p>랜딩·후기·설명회로 망설임을 없애고 실제 계약으로 전환합니다.</p></div>
-        <div class="ac-proc-step"><span class="ac-proc-n">04</span><h4>재계약·확장</h4><p>가맹점 성과와 만족을 관리해 추가 출점·확장으로 이어갑니다.</p></div>
+      <div class="htl">
+        <span class="htl-line"><span class="htl-line-fill"></span></span>
+        <span class="htl-dot"></span>
+        <div class="htl-steps">
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">01</span><h4>진성 DB 확보</h4><p>창업 의지가 높은 예비 점주만<br />정밀 타깃으로 모읍니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">02</span><h4>개인화 상담</h4><p>수익성·본사 지원·차별성을 근거로<br />신뢰를 쌓는 상담을 설계합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">03</span><h4>계약 전환</h4><p>랜딩·후기·설명회로 망설임을<br />없애고 실제 계약으로 전환합니다.</p></div>
+          <div class="htl-step"><span class="htl-node"></span><span class="htl-n">04</span><h4>재계약·확장</h4><p>가맹점 성과와 만족을 관리해<br />추가 출점·확장으로 이어갑니다.</p></div>
+        </div>
       </div>
     </div>
   </section>

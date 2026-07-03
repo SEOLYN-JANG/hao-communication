@@ -767,7 +767,7 @@ br.br-pc { display: inline; }
 .htl-line { position: absolute; left: 0; right: 0; top: 60px; height: 2px; background: var(--line); border-radius: 2px; }
 .htl-line-fill { position: absolute; left: 0; top: 0; height: 100%; width: 100%; background: linear-gradient(90deg, var(--orange), var(--orange-light)); border-radius: 2px; }
 .htl-dot { position: absolute; top: 61px; left: 100%; width: 15px; height: 15px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--orange); box-shadow: 0 0 0 6px rgba(234,67,36,.18); z-index: 3; }
-.htl-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 22px; }
+.htl-steps { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 22px; }
 .htl-step { position: relative; text-align: left; }
 .htl-node { display: block; width: 15px; height: 15px; border-radius: 50%; background: var(--orange); border: 2px solid var(--orange); margin-bottom: 30px; position: relative; z-index: 2; }
 .htl-n {
@@ -806,7 +806,7 @@ br.br-pc { display: inline; }
 @media (max-width: 720px) {
   .htl { padding-top: 8px; }
   .htl-line, .htl-dot { display: none; }
-  .htl-steps { grid-template-columns: 1fr 1fr; gap: 28px 20px; }
+  .htl-steps { grid-auto-flow: row; grid-template-columns: 1fr 1fr; gap: 28px 20px; }
   .htl-node { display: none; }
 }
 
