@@ -239,10 +239,14 @@ br.br-pc { display: inline; }
   min-height: clamp(540px, 64vh, 660px);
   background: #fff; border: 1px solid var(--line); border-radius: 32px;
   padding: 48px 46px 56px; overflow: hidden;
-  box-shadow: 0 28px 60px -30px rgba(14,14,18,.4);
-  transition: transform .35s var(--ease), box-shadow .35s var(--ease);
+  box-shadow: 0 20px 46px -30px rgba(14,14,18,.28);
+  transform: scale(0.9); opacity: 0.6; transform-origin: center;
+  transition: transform .5s var(--ease), opacity .5s var(--ease), box-shadow .5s var(--ease);
 }
-.hx-card:hover { transform: translateY(-6px); box-shadow: 0 34px 62px -28px rgba(14,14,18,.42); }
+.hx-card.is-active {
+  transform: scale(1); opacity: 1;
+  box-shadow: 0 44px 84px -32px rgba(14,14,18,.5);
+}
 .hx-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
 .hx-badge {
   width: 68px; height: 68px; border-radius: 20px; background: var(--hc); color: #fff;
@@ -250,10 +254,10 @@ br.br-pc { display: inline; }
   box-shadow: 0 16px 30px -12px var(--hc);
 }
 .hx-badge svg { width: 34px; height: 34px; }
-.hx-cat { font-size: 12.5px; font-weight: 800; letter-spacing: 2px; color: var(--gray); }
-.hx-title { font-size: clamp(28px, 3.2vw, 37px); font-weight: 800; letter-spacing: -1px; margin: 0 0 16px; }
+.hx-cat { font-size: 13.5px; font-weight: 800; letter-spacing: 2px; color: var(--gray); }
+.hx-title { font-size: clamp(31px, 3.6vw, 42px); font-weight: 800; letter-spacing: -1px; margin: 0 0 18px; }
 .hx-title span { color: var(--hc); }
-.hx-quote { font-size: 16.5px; line-height: 1.7; color: var(--gray); margin: 0 0 32px; min-height: 3em; }
+.hx-quote { font-size: 18px; line-height: 1.7; color: var(--gray); margin: 0 0 34px; min-height: 3em; }
 
 .hx-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .hx-ic {
@@ -267,13 +271,14 @@ br.br-pc { display: inline; }
   display: flex; align-items: center; justify-content: center; font-size: 24px;
 }
 .hx-ic-img img { width: 29px; height: 29px; object-fit: contain; }
-.hx-ic > span { font-size: 13.5px; font-weight: 700; color: var(--ink); text-align: center; }
+.hx-ic > span { font-size: 15px; font-weight: 700; color: var(--ink); text-align: center; }
 
 .hx-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .hx-steps li { display: flex; gap: 12px; align-items: flex-start; background: #f6f6f4; border-radius: 15px; padding: 15px 17px; }
 .hx-check { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 50%; background: var(--hc); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; margin-top: 1px; }
-.hx-steps strong { display: block; font-size: 14px; font-weight: 800; margin-bottom: 3px; letter-spacing: -.3px; }
-.hx-steps em { font-style: normal; font-size: 12.5px; line-height: 1.5; color: var(--gray); }
+.hx-steps li { padding: 17px 19px; }
+.hx-steps strong { display: block; font-size: 16px; font-weight: 800; margin-bottom: 4px; letter-spacing: -.3px; }
+.hx-steps em { font-style: normal; font-size: 14px; line-height: 1.55; color: var(--gray); }
 
 .hx-num { position: absolute; right: 30px; bottom: 18px; font-size: 138px; font-weight: 900; color: var(--hc); opacity: .11; line-height: 1; letter-spacing: -6px; }
 
@@ -287,7 +292,7 @@ br.br-pc { display: inline; }
 .hx-card-dark .hx-num { color: #fff; }
 .hx-flow { display: flex; flex-direction: column; align-items: center; }
 .hx-flow-top { display: flex; gap: 12px; width: 100%; }
-.hx-fchip { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 20px 8px; border-radius: 16px; font-size: 13.5px; font-weight: 800; }
+.hx-fchip { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 9px; padding: 22px 8px; border-radius: 16px; font-size: 15px; font-weight: 800; }
 .hx-fchip span { font-size: 24px; display: flex; }
 .hx-fchip span svg { width: 28px; height: 28px; }
 .hx-fchip-1 { background: #e9f2f0; color: #2f8f8a; }
@@ -297,8 +302,8 @@ br.br-pc { display: inline; }
 .hx-fresult {
   width: 100%; text-align: center; padding: 22px; border-radius: 16px;
   background: linear-gradient(135deg, var(--orange), var(--orange-dark, #cf3417));
-  color: #fff; font-size: 17px; font-weight: 800;
-  display: flex; flex-direction: column; align-items: center; gap: 9px;
+  color: #fff; font-size: 19px; font-weight: 800;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
   box-shadow: 0 16px 30px -14px var(--orange);
 }
 .hx-fresult span { width: 42px; height: 42px; border-radius: 12px; background: rgba(255,255,255,.16); display: flex; align-items: center; justify-content: center; font-size: 22px; }

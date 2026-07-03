@@ -470,15 +470,7 @@
 
     const syncDots = () => {
       const idx = activeIndex();
-      dots.forEach((d, i) => {
-        const on = i === idx;
-        // is-active 재부여로 진행바 애니메이션 재시작
-        if (on && !d.classList.contains("is-active")) {
-          d.classList.remove("is-active");
-          void d.offsetWidth;
-        }
-        d.classList.toggle("is-active", on);
-      });
+      cards.forEach((c, i) => c.classList.toggle("is-active", i === idx));
       const max = track.scrollWidth - track.clientWidth - 2;
       prev.classList.toggle("is-disabled", track.scrollLeft <= 2);
       next.classList.toggle("is-disabled", track.scrollLeft >= max);

@@ -1228,7 +1228,7 @@ cat <<'EOF'
     <div class="hx-carousel">
       <button class="hx-arrow hx-prev" type="button" aria-label="이전">&#8249;</button>
       <div class="hx-track">
-        <article class="hx-card" style="--hc:#3a6ea5">
+        <article class="hx-card is-active" style="--hc:#3a6ea5">
           <div class="hx-head"><span class="hx-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="15.5" y1="15.5" x2="20" y2="20"/></svg></span><span class="hx-cat">TRADITIONAL MARKETING</span></div>
           <h3 class="hx-title">환자가 <span>검색하는</span> 곳</h3>
           <p class="hx-quote">"네이버에만 있는 병원,<br />AI 검색에서는 보이지 않습니다."</p>
