@@ -1045,7 +1045,7 @@ br.br-pc { display: inline; }
 .vch-table thead tr:first-child th { border-right: 1px solid rgba(255,255,255,0.12); }
 .vch-table thead th span { font-weight: 400; font-size: 12px; opacity: 0.7; }
 .vch-table tbody td:first-child { font-weight: 700; background: #faf7f4; }
-.vch-table td.hl { color: var(--orange); font-weight: 900; }
+.vch-table td.hl { background: var(--orange); color: #fff; font-weight: 900; border-radius: 0; }
 .vch-table tbody tr:last-child td { border-bottom: none; }
 .vch-example {
   margin-top: 24px; text-align: center; background: rgba(234,67,36,0.06); border: 1px solid rgba(234,67,36,0.2);
