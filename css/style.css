@@ -1418,13 +1418,13 @@ br.br-pc { display: inline; }
 .reason-tl::before { content: ""; position: absolute; left: 50%; top: 22px; bottom: 22px; width: 2px; background: var(--line); transform: translateX(-50%); }
 .rtl-item { display: grid; grid-template-columns: 1fr 60px 1fr; align-items: center; margin-bottom: 34px; }
 .rtl-item:last-child { margin-bottom: 0; }
-.rtl-num { grid-column: 2; justify-self: center; width: 46px; height: 46px; border-radius: 50%; background: #fff; border: 2px solid var(--line); color: var(--orange); font-family: "Baloo 2", sans-serif; font-weight: 800; display: flex; align-items: center; justify-content: center; z-index: 2; }
+.rtl-num { grid-column: 2; justify-self: center; width: 54px; height: 54px; font-size: 20px; border-radius: 50%; background: #fff; border: 2px solid var(--line); color: var(--orange); font-family: "Baloo 2", sans-serif; font-weight: 800; display: flex; align-items: center; justify-content: center; z-index: 2; }
 .rtl-item:nth-child(even) .rtl-num { background: var(--orange); color: #fff; border-color: var(--orange); box-shadow: 0 0 0 5px rgba(234,67,36,0.15); }
-.rtl-card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 22px 24px; box-shadow: 0 14px 34px -24px rgba(0,0,0,0.2); }
+.rtl-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 28px 30px; box-shadow: 0 14px 34px -24px rgba(0,0,0,0.2); }
 .rtl-item:nth-child(odd) .rtl-card { grid-column: 1; text-align: right; }
 .rtl-item:nth-child(even) .rtl-card { grid-column: 3; text-align: left; }
-.rtl-card h3 { font-size: 19px; font-weight: 900; color: var(--ink); margin-bottom: 10px; }
-.rtl-card p { font-size: 14.5px; color: var(--gray); line-height: 1.65; }
+.rtl-card h3 { font-size: 24px; font-weight: 900; color: var(--ink); margin-bottom: 12px; letter-spacing: -.5px; }
+.rtl-card p { font-size: 16.5px; color: var(--gray); line-height: 1.7; }
 .rtl-item:nth-child(even) .rtl-card h3 { color: var(--orange); }
 
 /* 검색 시장 규칙 — 다크 + 밤하늘 + 로고 별자리 */

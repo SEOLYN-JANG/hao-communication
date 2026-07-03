@@ -1291,11 +1291,11 @@ cat <<'EOF'
   <!-- 3가지 이유 (지그재그) -->
   <section class="section alt-bg">
     <div class="container">
-      <div class="section-head center"><span class="tag">WHY NOT YET</span><h2 class="section-title">병원이 <span class="accent">AI 검색</span>을 놓쳤던 3가지 이유</h2></div>
+      <div class="section-head center"><span class="tag">WHY NOT YET</span><h2 class="section-title">원장님이 <span class="accent">AI마케팅</span>을 미루셨던 3가지 이유</h2></div>
       <div class="reason-tl">
-        <div class="rtl-item"><div class="rtl-card"><h3>당장 환자가 급한데</h3><p>3~6개월 기다려야 효과가 나온다는데, 이번 달 매출이 급한 원장님께 그건 먼 이야기였습니다.</p></div><span class="rtl-num">01</span></div>
-        <div class="rtl-item"><span class="rtl-num">02</span><div class="rtl-card"><h3>뭐가 달라지는지 모르겠는데</h3><p>돈을 쓰면 뭐가 바뀌는지 눈에 보여야 하는데, 설명을 들어도 감이 안 왔습니다.</p></div></div>
-        <div class="rtl-item"><div class="rtl-card"><h3>블로그·인스타가 더 잘 되는데</h3><p>블로그·인스타·유튜브는 바로 반응이 보이는데, AI 검색까지 할 필요가 있었을까요?</p></div><span class="rtl-num">03</span></div>
+        <div class="rtl-item"><div class="rtl-card"><h3>당장 환자가 급한데?</h3><p>3~6개월 기다려야 효과가 나온다는데,<br />이번 달 매출이 급한 원장님께 그건 먼 이야기였습니다.</p></div><span class="rtl-num">01</span></div>
+        <div class="rtl-item"><span class="rtl-num">02</span><div class="rtl-card"><h3>뭐가 달라지는지 모르겠는데?</h3><p>돈을 쓰면 뭐가 바뀌는지 눈에 보여야 하는데,<br />설명을 들어도 감이 안 왔습니다.</p></div></div>
+        <div class="rtl-item"><div class="rtl-card"><h3>블로그·인스타가 더 잘 되는데?</h3><p>블로그·인스타·유튜브는 바로 반응이 보이는데,<br />AI 검색까지 할 필요가 있었을까요?</p></div><span class="rtl-num">03</span></div>
       </div>
     </div>
   </section>
