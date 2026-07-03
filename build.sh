@@ -264,6 +264,30 @@ cat <<EOF
 EOF
 }
 
+# FAQ 섹션 (화면 아코디언 + FAQPage 스키마). 사용법: faq_section "제목" "Q1" "A1" "Q2" "A2" ...
+faq_section() {
+  local heading="$1"; shift
+  local html="" json="" first=1
+  while [ "$#" -ge 2 ]; do
+    local q="$1" a="$2"; shift 2
+    local op=""; [ "$first" = 1 ] && op=" open"; first=0
+    html="$html        <details$op><summary>$q</summary><p>$a</p></details>
+"
+    [ -n "$json" ] && json="$json,"
+    json="$json{\"@type\":\"Question\",\"name\":\"$q\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"$a\"}}"
+  done
+cat <<EOF
+  <section class="section alt-bg">
+    <div class="container aeo-faq-wrap">
+      <div class="section-head center"><span class="tag">FAQ</span><h2 class="section-title">$heading</h2></div>
+      <div class="aeo-faq">
+$html      </div>
+    </div>
+  </section>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[$json]}</script>
+EOF
+}
+
 # ---------------- 칼럼(SEO/AEO) 자동 생성 ----------------
 meta_get() { sed -n "s/^$2:[[:space:]]*//p" "$1" | head -1; }
 
@@ -878,17 +902,6 @@ cat <<EOF
     </div>
   </section>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      { "@type": "Question", "name": "언론보도가 AI 추천(AEO·GEO)에 도움이 되나요?", "acceptedAnswer": { "@type": "Answer", "text": "네. AI는 출처의 권위를 평가하며 정식 등록 언론 매체의 기사에 가장 높은 가중치를 둡니다. 언론보도는 AI가 브랜드를 신뢰 근거로 인용·추천하게 만드는 핵심 자산입니다. 하오커뮤니케이션은 언론홍보를 AI마케팅과 하나의 전략으로 설계합니다." } },
-      { "@type": "Question", "name": "작은 회사도 언론보도가 가능한가요?", "acceptedAnswer": { "@type": "Answer", "text": "가능합니다. 신제품 출시, 수상, 투자, 사회공헌, 업계 트렌드 코멘트 등 뉴스 가치가 있는 앵글을 잡으면 규모와 무관하게 보도될 수 있습니다. 중요한 것은 회사 규모가 아니라 뉴스 가치입니다." } }
-    ]
-  }
-  </script>
-
   <section class="section vch-intro">
     <div class="container">
       <span class="tag">AI PR AGENT</span>
@@ -945,6 +958,11 @@ cat <<EOF
     </div>
   </section>
 EOF
+faq_section "언론홍보 <span class=\"accent\">자주 묻는 질문</span>" \
+  "작은 회사도 언론보도가 가능한가요?" "가능합니다. 신제품 출시·수상·투자·사회공헌·업계 트렌드 코멘트 등 뉴스 가치가 있는 앵글을 잡으면 규모와 무관하게 보도될 수 있습니다." \
+  "언론보도가 AI 추천에도 도움이 되나요?" "네. AI는 정식 등록 언론 매체의 기사에 가장 높은 가중치를 둡니다. 언론보도는 AI가 브랜드를 신뢰 근거로 인용하게 만드는 핵심 자산입니다." \
+  "보도자료만 쓰면 기사가 되나요?" "뉴스 가치가 있어야 합니다. 하오는 기사거리를 발굴하고 기사화 가능성을 판단한 뒤 매체를 선별해 노출합니다." \
+  "성과는 어떻게 확인하나요?" "포털 노출과 기사화 여부를 추적하고 결과를 데이터로 보고드립니다."
 cta_band
 footer_close
 } > pr.html
@@ -1049,6 +1067,11 @@ cat <<'EOF'
     </div>
   </section>
 EOF
+faq_section "SNS마케팅 <span class=\"accent\">자주 묻는 질문</span>" \
+  "팔로워가 적어도 효과가 있나요?" "네. 팔로워 수보다 콘텐츠의 확산력과 타깃 정확도가 매출을 좌우합니다. 하오는 적은 팔로워로도 전환되는 콘텐츠 구조를 설계합니다." \
+  "어떤 채널부터 시작해야 하나요?" "업종과 고객층에 따라 다릅니다. 인스타그램·유튜브·틱톡·네이버 중 우리 브랜드에 맞는 채널을 진단해 우선순위를 정합니다." \
+  "콘텐츠 제작도 대행해 주나요?" "네. 기획부터 촬영·디자인·카피·편집까지 자체 팀이 제작하고, 반응 데이터로 지속 최적화합니다." \
+  "광고비는 어느 정도 필요한가요?" "목표와 업종에 따라 다릅니다. 무료 상담에서 예상 예산과 기대 효과를 함께 설계해 드립니다."
 footer_close
 } > sns.html
 
@@ -1116,6 +1139,7 @@ cat <<'EOF'
       </div>
     </div>
   </section>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"이제 막 시작하는 브랜드도 가능한가요?","acceptedAnswer":{"@type":"Answer","text":"네. 브랜드 기획 단계부터 함께합니다. 아이템·컨셉 정립, 수익구조 설계부터 시작해 확장의 토대를 만들어 드립니다."}},{"@type":"Question","name":"가맹점 모집까지 도와주나요?","acceptedAnswer":{"@type":"Answer","text":"가맹 모집 홈페이지 제작, DB 광고, 상담 전환 설계까지 실제 가맹 계약으로 이어지는 전 과정을 지원합니다."}},{"@type":"Question","name":"비용은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"브랜드 상황과 필요한 범위에 따라 맞춤 견적으로 안내드립니다. 먼저 무료 상담으로 진단부터 받아보세요."}}]}</script>
 EOF
 cta_band
 footer_close
@@ -1185,6 +1209,7 @@ cat <<'EOF'
       </div>
     </div>
   </section>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"변호사 마케팅, 꼭 해야 할까요?","acceptedAnswer":{"@type":"Answer","text":"경쟁이 치열해질수록 의뢰인은 검색으로 변호사를 찾습니다. 검색 결과에 보이지 않으면 선택지에 들어가지 못합니다. 마케팅은 선택이 아니라 노출의 기본이 되었습니다."}},{"@type":"Question","name":"변호사 블로그, 효과가 있나요?","acceptedAnswer":{"@type":"Answer","text":"있습니다. 단, 제대로 해야 합니다. 분야 전문성과 검색 구조를 갖춘 블로그만이 신뢰와 상담으로 이어집니다."}},{"@type":"Question","name":"광고 규정 위반이 걱정됩니다.","acceptedAnswer":{"@type":"Answer","text":"변호사법과 광고 규정을 숙지한 상태로 콘텐츠·광고를 설계합니다. 규정 준수를 전제로 안전하게 진행합니다."}}]}</script>
 EOF
 cta_band
 footer_close
@@ -1361,6 +1386,11 @@ cat <<'EOF'
     </div>
   </section>
 EOF
+faq_section "병원마케팅 <span class=\"accent\">자주 묻는 질문</span>" \
+  "병원도 AI 검색 마케팅이 필요한가요?" "네. 환자는 이제 AI에게 병원을 추천받습니다. AI 답변에 우리 병원이 없으면 후보에서 빠집니다." \
+  "의료광고 심의는 문제없나요?" "의료광고 심의 기준을 준수하는 범위에서 콘텐츠와 노출을 설계하므로 안심하셔도 됩니다." \
+  "효과는 언제부터 나타나나요?" "검색·플레이스는 비교적 빠르게, AI 인용은 신뢰 신호가 쌓이는 60~90일 내에 변화가 나타납니다." \
+  "우리 병원 현황을 먼저 알 수 있나요?" "네. 무료 AI 가시성 진단으로 지금 우리 병원이 검색과 AI에서 어떻게 노출되는지 확인해 드립니다."
 cta_band
 footer_close
 } > hospital.html
@@ -1518,6 +1548,11 @@ cat <<'EOF'
     </div>
   </section>
 EOF
+faq_section "학원마케팅 <span class=\"accent\">자주 묻는 질문</span>" \
+  "학원 마케팅은 언제 효과가 나나요?" "지역 타깃 광고는 빠르게 문의로, 플레이스·콘텐츠 자산은 수 주에 걸쳐 등록으로 이어집니다." \
+  "블로그만으로는 부족한가요?" "블로그는 기본입니다. 플레이스·검색광고·AI 검색까지 함께 잡아야 실제 등록으로 연결됩니다." \
+  "어떤 학원에 맞나요?" "보습·입시·예체능·유학·온라인 클래스 등 지역과 과목 기반 교육 사업 전반에 맞습니다." \
+  "성과는 어떻게 확인하나요?" "노출·조회가 아니라 문의·상담·실제 원생 등록까지 추적해 리포트로 보고드립니다."
 cta_band
 footer_close
 } > academy.html
@@ -1718,6 +1753,11 @@ cat <<'EOF'
   </section>
 EOF
 why_band
+faq_section "디자인센터 <span class=\"accent\">자주 묻는 질문</span>" \
+  "디자인만 따로 의뢰할 수 있나요?" "네. 로고·CI/BI, 상세페이지, 홍보물, 홈페이지 등 필요한 디자인만 단독으로 진행할 수 있습니다." \
+  "마케팅과 함께하면 뭐가 좋나요?" "브랜드 톤이 일관되게 유지되고, 디자인이 곧바로 광고·콘텐츠 성과로 이어집니다." \
+  "작업 기간은 얼마나 걸리나요?" "범위에 따라 다르며, 상담 시 항목별 일정과 산출물을 명확히 안내해 드립니다." \
+  "수정은 몇 번까지 되나요?" "합의된 범위 내에서 충분히 반영하며, 시작 전 수정 정책을 투명하게 안내합니다."
 cta_band
 footer_close
 } > design.html
