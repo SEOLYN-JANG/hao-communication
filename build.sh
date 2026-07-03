@@ -43,7 +43,7 @@ cat <<EOF
 <meta name="twitter:image" content="$SITE_URL/assets/og-image.jpg" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Black+Han+Sans&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Black+Han+Sans&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
 <script type="application/ld+json">
 {
@@ -258,6 +258,52 @@ cat <<EOF
       <div class="cta-actions">
         <a href="contact.html" class="cta-btn cta-btn-primary">무료 상담받기 <span>&#8250;</span></a>
         <a href="portfolio.html" class="cta-btn cta-btn-ghost">성공사례 보기 <span>&#8250;</span></a>
+      </div>
+    </div>
+  </section>
+EOF
+}
+
+# 대표의 약속 — 동일 지역·동일 업종 독점 서약 (손글씨 + 낙관 도장)
+# 사용법: pledge_band  또는  pledge_band "지역·업종 문구"
+pledge_band() {
+  local scope="${1:-동일 지역, 동일 업종}"
+cat <<EOF
+  <section class="section pledge-band">
+    <div class="container pledge-wrap">
+      <div class="pledge-head">
+        <span class="tag">대표의 약속</span>
+        <h2 class="section-title">$scope <span class="accent">한 곳</span>만 맡습니다</h2>
+      </div>
+      <div class="pledge-card">
+        <p class="pledge-hand">
+          하오커뮤니케이션은 이미 함께하고 있는 고객사와<br />
+          <b>$scope</b>이 겹치는 업체는 새로 받지 않습니다.<br />
+          경쟁사끼리 같은 손을 잡을 수는 없으니까요.<br />
+          맡은 한 곳의 성과에만 집중하겠다는, 대표의 약속입니다.
+        </p>
+        <div class="pledge-sign">
+          <span class="pledge-name">하오커뮤니케이션 대표 드림</span>
+          <span class="pledge-seal" aria-label="하오커뮤니케이션 인장">
+            <svg viewBox="0 0 200 200" role="img" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <filter id="sealRough" x="-15%" y="-15%" width="130%" height="130%">
+                  <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="n"/>
+                  <feDisplacementMap in="SourceGraphic" in2="n" scale="3.4" xChannelSelector="R" yChannelSelector="G"/>
+                </filter>
+              </defs>
+              <g filter="url(#sealRough)">
+                <rect x="13" y="13" width="174" height="174" rx="16" fill="#fff" stroke="#b5221b" stroke-width="9"/>
+                <line x1="100" y1="22" x2="100" y2="178" stroke="#b5221b" stroke-width="2.2" opacity=".5"/>
+                <line x1="22" y1="100" x2="178" y2="100" stroke="#b5221b" stroke-width="2.2" opacity=".5"/>
+                <g fill="#b5221b" font-family="'Black Han Sans',sans-serif" font-size="33" text-anchor="middle">
+                  <text x="139" y="59">하</text><text x="139" y="98">오</text><text x="139" y="137">커</text><text x="139" y="176">뮤</text>
+                  <text x="61" y="59">니</text><text x="61" y="98">케</text><text x="61" y="137">이</text><text x="61" y="176">션</text>
+                </g>
+              </g>
+            </svg>
+          </span>
+        </div>
       </div>
     </div>
   </section>
@@ -625,6 +671,7 @@ cat <<'EOF'
     </div></div>
   </section>
 EOF
+pledge_band
 cta_band
 footer_close
 } > index.html
@@ -911,6 +958,7 @@ cat <<'EOF'
   }
   </script>
 EOF
+pledge_band
 cta_band
 footer_close
 } > ai-marketing.html
@@ -996,6 +1044,7 @@ faq_section "언론홍보 <span class=\"accent\">자주 묻는 질문</span>" \
   "성과는 어떻게 확인하나요?" "포털 노출과 기사화 여부를 추적하고 결과를 데이터로 보고드립니다."
 stats_band
 punch_band "언론은 사는 게 아니라,<br /><span class=\"accent\">만드는</span> 것입니다" "광고는 우리가 말하지만, 기사는 세상이 증명합니다.<br />하오는 뉴스가 되는 이야기를 발굴해, 신뢰를 자산으로 만듭니다."
+pledge_band
 cta_band
 footer_close
 } > pr.html
@@ -1107,6 +1156,7 @@ faq_section "SNS마케팅 <span class=\"accent\">자주 묻는 질문</span>" \
   "광고비는 어느 정도 필요한가요?" "목표와 업종에 따라 다릅니다. 무료 상담에서 예상 예산과 기대 효과를 함께 설계해 드립니다."
 stats_band
 punch_band "팔로워가 아니라,<br /><span class=\"accent\">매출</span>을 남깁니다" "스크롤을 멈추게 하는 콘텐츠와 지갑을 여는 전략.<br />하오는 '보이는 성과'만 남기는 SNS 마케팅을 합니다."
+pledge_band
 footer_close
 } > sns.html
 
@@ -1245,6 +1295,7 @@ cat <<'EOF'
 EOF
 stats_band
 punch_band "브랜드가 팔려야,<br />가맹점이 모입니다" "예비 창업자는 매출이 아니라 '믿음'을 보고 결정합니다.<br />하오는 본사 브랜딩부터 가맹 모객까지, 그 믿음을 설계합니다."
+pledge_band
 cta_band
 footer_close
 } > franchise.html
@@ -1399,6 +1450,7 @@ cat <<'EOF'
 EOF
 stats_band
 punch_band "실력은 기본,<br />선택은 <span class=\"accent\">브랜딩</span>입니다" "의뢰인은 검색과 AI로 변호사를 고릅니다.<br />보이지 않으면, 아무리 뛰어난 실력도 전달되지 않습니다."
+pledge_band
 cta_band
 footer_close
 } > lawyer.html
@@ -1579,6 +1631,7 @@ faq_section "병원마케팅 <span class=\"accent\">자주 묻는 질문</span>"
   "의료광고 심의는 문제없나요?" "의료광고 심의 기준을 준수하는 범위에서 콘텐츠와 노출을 설계하므로 안심하셔도 됩니다." \
   "효과는 언제부터 나타나나요?" "검색·플레이스는 비교적 빠르게, AI 인용은 신뢰 신호가 쌓이는 60~90일 내에 변화가 나타납니다." \
   "우리 병원 현황을 먼저 알 수 있나요?" "네. 무료 AI 가시성 진단으로 지금 우리 병원이 검색과 AI에서 어떻게 노출되는지 확인해 드립니다."
+pledge_band
 cta_band
 footer_close
 } > hospital.html
@@ -1741,6 +1794,7 @@ faq_section "학원마케팅 <span class=\"accent\">자주 묻는 질문</span>"
   "블로그만으로는 부족한가요?" "블로그는 기본입니다. 플레이스·검색광고·AI 검색까지 함께 잡아야 실제 등록으로 연결됩니다." \
   "어떤 학원에 맞나요?" "보습·입시·예체능·유학·온라인 클래스 등 지역과 과목 기반 교육 사업 전반에 맞습니다." \
   "성과는 어떻게 확인하나요?" "노출·조회가 아니라 문의·상담·실제 원생 등록까지 추적해 리포트로 보고드립니다."
+pledge_band
 cta_band
 footer_close
 } > academy.html

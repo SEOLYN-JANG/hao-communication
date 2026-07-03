@@ -729,6 +729,38 @@ br.br-pc { display: inline; }
 .why-card p { color: var(--gray); font-size: 15px; }
 
 /* CTA band */
+/* ===== 대표의 약속 (독점 서약 + 낙관) ===== */
+.pledge-band { background: #faf8f5; }
+.pledge-wrap { max-width: 880px; margin: 0 auto; }
+.pledge-head { text-align: center; margin-bottom: 34px; }
+.pledge-card {
+  position: relative; background: #fff; border: 1px solid var(--line);
+  border-radius: 22px; padding: 54px 56px 44px;
+  box-shadow: 0 30px 60px -40px rgba(14,14,18,.3);
+}
+.pledge-card::before {
+  content: ""; position: absolute; left: 0; top: 26px; bottom: 26px; width: 4px;
+  background: linear-gradient(var(--orange), var(--orange-light)); border-radius: 4px;
+}
+.pledge-hand {
+  font-family: "Nanum Pen Script", "Noto Sans KR", cursive;
+  font-size: clamp(26px, 3.4vw, 34px); line-height: 1.85; color: #26242b;
+  letter-spacing: .2px; margin: 0;
+}
+.pledge-hand b { color: var(--orange-dark, #cf3417); font-weight: 400; border-bottom: 2px solid var(--orange-light); }
+.pledge-sign {
+  display: flex; align-items: center; justify-content: flex-end; gap: 20px;
+  margin-top: 30px; padding-top: 26px; border-top: 1px dashed var(--line);
+}
+.pledge-name { font-size: 16px; font-weight: 700; color: var(--ink); letter-spacing: -.3px; }
+.pledge-seal { display: inline-block; width: 92px; height: 92px; transform: rotate(-7deg); flex: none; }
+.pledge-seal svg { width: 100%; height: 100%; filter: drop-shadow(0 3px 6px rgba(181,34,27,.28)); }
+@media (max-width: 640px) {
+  .pledge-card { padding: 40px 26px 32px; }
+  .pledge-sign { flex-direction: column; gap: 14px; align-items: flex-end; }
+  .pledge-seal { width: 78px; height: 78px; }
+}
+
 .cta-band { position: relative; overflow: hidden; background: linear-gradient(120deg, var(--orange), var(--orange-dark)); color: #fff; padding: 76px 0; }
 .cta-band::before { content: ""; position: absolute; right: -8%; top: -40%; width: 60%; height: 180%; background: radial-gradient(circle, rgba(255,255,255,0.16), transparent 62%); pointer-events: none; }
 .cta-grid { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 44px; flex-wrap: wrap; }
