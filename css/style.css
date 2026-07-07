@@ -1819,6 +1819,24 @@ br.br-pc { display: inline; }
   .fb-blog, .fb-kakao { width: 38px; height: 28px; font-size: 12px; }
   .fb-item em { font-size: 10px; }
 }
+/* 모바일: 우측 세로 플로팅 바 → 하단 가로 바 (본문 겹침 해결) */
+@media (max-width: 640px) {
+  .floatbar {
+    right: 0; left: 0; top: auto; bottom: 0; transform: none;
+    flex-direction: row; justify-content: space-around; align-items: center;
+    gap: 0; padding: 7px 4px calc(7px + env(safe-area-inset-bottom));
+    border-radius: 18px 18px 0 0; box-shadow: 0 -10px 30px -14px rgba(0,0,0,0.4);
+  }
+  .fb-item { width: auto; flex: 1 1 0; gap: 3px; }
+  .fb-ico { width: 26px; height: 26px; }
+  .fb-ico svg { width: 23px; height: 23px; }
+  .fb-blog, .fb-kakao { width: 34px; height: 23px; font-size: 11px; border-radius: 7px; }
+  .fb-item em { font-size: 10.5px; }
+  /* 빠른 상담 토글을 하단 바 위로 띄움 (기본 .quickc 규칙보다 명시도 우선) */
+  body .quickc { right: 14px; bottom: calc(80px + env(safe-area-inset-bottom)); }
+  /* 하단 바가 마지막 콘텐츠(푸터)를 가리지 않도록 여백 확보 */
+  body { padding-bottom: calc(62px + env(safe-area-inset-bottom)); }
+}
 
 /* 빠른 상담 신청 (토글 팝업) */
 .quickc { position: fixed; right: 22px; bottom: 22px; z-index: 160; }
