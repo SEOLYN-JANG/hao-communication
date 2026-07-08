@@ -1230,6 +1230,36 @@ br.br-pc { display: inline; }
 .ac-claim-sub { font-size: 17px; line-height: 1.9; color: rgba(255,255,255,.72); margin: 0; }
 .ac-claim-sub strong { color: #fff; }
 
+/* 2.5 실시간 원생 등록 피드 (라이브 대시보드 목업) */
+.ac-feed-panel {
+  max-width: 760px; margin: 42px auto 0; background: #17171d; border: 1px solid #2a2a34;
+  border-radius: 18px; overflow: hidden; box-shadow: 0 46px 90px -46px rgba(0,0,0,.55);
+}
+.ac-feed-bar { display: flex; align-items: center; gap: 12px; padding: 15px 20px; background: #0f0f14; border-bottom: 1px solid #26262e; }
+.ac-feed-live { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; letter-spacing: .6px; color: #ff5a3d; }
+.ac-feed-live i { width: 8px; height: 8px; border-radius: 50%; background: #ff3b30; animation: acLivePulse 1.6s infinite; }
+@keyframes acLivePulse { 0% { box-shadow: 0 0 0 0 rgba(255,59,48,.55); } 70% { box-shadow: 0 0 0 7px rgba(255,59,48,0); } 100% { box-shadow: 0 0 0 0 rgba(255,59,48,0); } }
+.ac-feed-title { font-size: 13px; color: rgba(255,255,255,.6); font-weight: 600; }
+.ac-feed-count { margin-left: auto; font-size: 13px; color: rgba(255,255,255,.72); }
+.ac-feed-count b { color: #fff; font-family: "Baloo 2", sans-serif; font-size: 17px; margin: 0 1px; }
+.ac-feed-head, .ac-feed-row { display: grid; grid-template-columns: 0.9fr 1.6fr 1.2fr 0.9fr; align-items: center; gap: 10px; padding: 0 20px; }
+.ac-feed-head { height: 42px; background: #1e1e26; font-size: 12px; font-weight: 700; color: rgba(255,255,255,.42); letter-spacing: .3px; }
+.ac-feed-rows { min-height: 364px; }
+.ac-feed-row { height: 52px; border-bottom: 1px solid #23232b; font-size: 14px; color: rgba(255,255,255,.82); animation: acFeedIn .55s cubic-bezier(.22,1,.36,1) both; }
+@keyframes acFeedIn { 0% { opacity: 0; transform: translateY(-16px); background: rgba(234,67,36,.20); } 55% { background: rgba(234,67,36,.10); } 100% { opacity: 1; transform: none; background: transparent; } }
+.ac-feed-name { font-weight: 700; color: #fff; letter-spacing: .3px; }
+.ac-feed-course { color: rgba(255,255,255,.66); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ac-feed-time { color: rgba(255,255,255,.42); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.ac-feed-badge { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 800; color: #34c759; }
+.ac-feed-badge i { width: 6px; height: 6px; border-radius: 50%; background: #34c759; }
+.ac-feed-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 16px; }
+@media (max-width: 560px) {
+  .ac-feed-head, .ac-feed-row { grid-template-columns: 0.9fr 1.5fr 0.8fr; padding: 0 14px; gap: 8px; }
+  .ac-feed-head span:nth-child(3), .ac-feed-time { display: none; }
+  .ac-feed-title { display: none; }
+  .ac-feed-count { margin-left: auto; }
+}
+
 /* 3. 성과 지표 */
 .ac-stat-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;

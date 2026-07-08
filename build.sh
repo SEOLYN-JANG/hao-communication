@@ -1766,6 +1766,27 @@ cat <<'EOF'
     </div>
   </section>
 
+  <!-- 2.5 실시간 원생 등록 피드 -->
+  <section class="section ac-feed alt-bg">
+    <div class="container">
+      <div class="section-head center">
+        <span class="tag">LIVE</span>
+        <h2 class="section-title">한 달 만에 <span class="accent">원생 <span id="acFeedGoal" data-count="97">0</span>명</span> 모집한<br />그 등록의 흐름을 그대로 봅니다</h2>
+        <p class="section-sub">하오와 함께한 학원의 실제 신규 등록 유입 흐름을 재구성한 화면입니다. 개인정보는 마스킹 처리했습니다.</p>
+      </div>
+      <div class="ac-feed-panel" id="acFeed">
+        <div class="ac-feed-bar">
+          <span class="ac-feed-live"><i></i>LIVE</span>
+          <span class="ac-feed-title">신규 원생 등록 현황</span>
+          <span class="ac-feed-count">이번 달 <b id="acFeedNum">0</b>명 등록</span>
+        </div>
+        <div class="ac-feed-head"><span>이름</span><span>등록 과정</span><span>등록 일시</span><span>상태</span></div>
+        <div class="ac-feed-rows" id="acFeedRows"></div>
+      </div>
+      <p class="ac-feed-note">* 실제 운영 데이터를 바탕으로 재구성한 예시 화면이며, 개인정보는 마스킹했습니다. 성과는 학원별 상권·과목에 따라 다를 수 있습니다.</p>
+    </div>
+  </section>
+
   <!-- 3. 성과 지표 -->
   <section class="section ac-stats">
     <div class="container">
