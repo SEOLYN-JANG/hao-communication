@@ -267,57 +267,38 @@
   );
   counters.forEach((el) => cio.observe(el));
 
-  /* ---------- 5b. 학원 실시간 원생 등록 피드 ---------- */
+  /* ---------- 5b. 학원 등록 목록 (관리자 화면 빠른 스크롤 영상 느낌) ---------- */
   const acFeed = document.getElementById("acFeed");
   if (acFeed) {
-    const rowsEl = document.getElementById("acFeedRows");
-    const numEl = document.getElementById("acFeedNum");
-    const fams = ["김", "이", "박", "최", "정", "강", "조", "윤", "장", "임", "한", "오", "서", "신", "권", "황", "안", "송", "전", "홍"];
-    const gens = ["준", "서", "윤", "우", "아", "은", "현", "민", "지", "호", "연", "율", "하", "성", "빈", "경", "원", "희"];
-    const courses = ["초등 수학 정규반", "중등 영어 심화반", "고1 수학 내신반", "초등 종합반", "중등 과학 실험반", "예비중 국어반", "고등 영어 수능반", "초등 영어 파닉스", "중3 수학 집중반", "논술·독서토론반", "초등 사고력 수학", "고2 화학 내신반", "중등 수학 개념반", "초등 코딩반"];
-    const times = ["방금 전", "1분 전", "3분 전", "6분 전", "10분 전", "15분 전", "21분 전"];
-    const MAX = 7;
-    let count = 41;
-    const pick = (a) => a[Math.floor(Math.random() * a.length)];
-    const mask = () => pick(fams) + "O" + pick(gens);
-    function makeRow() {
-      const el = document.createElement("div");
-      el.className = "ac-feed-row";
-      el.innerHTML =
-        '<span class="ac-feed-name">' + mask() + "</span>" +
-        '<span class="ac-feed-course">' + pick(courses) + "</span>" +
-        '<span class="ac-feed-time"></span>' +
-        '<span class="ac-feed-badge"><i></i>등록완료</span>';
-      return el;
+    const track = document.getElementById("acFeedTrack");
+    if (track) {
+      const fams = ["김", "이", "박", "최", "정", "강", "조", "윤", "장", "임", "한", "오", "서", "신", "권", "황", "안", "송", "전", "홍", "고", "문", "양", "손"];
+      const gens = ["준", "서", "윤", "우", "아", "은", "현", "민", "지", "호", "연", "율", "하", "성", "빈", "경", "원", "희", "규", "찬"];
+      const courses = ["초등 수학 정규반", "중등 영어 심화반", "고1 수학 내신반", "초등 종합반", "중등 과학 실험반", "예비중 국어반", "고등 영어 수능반", "초등 영어 파닉스", "중3 수학 집중반", "논술·독서토론반", "초등 사고력 수학", "고2 화학 내신반", "중등 수학 개념반", "초등 코딩반", "고3 수학 파이널", "중등 국어 문법반"];
+      const pick = (a) => a[Math.floor(Math.random() * a.length)];
+      const mask = () => pick(fams) + "O" + pick(gens);
+      const pad = (n) => String(n).padStart(2, "0");
+      const fmt = (d) => d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()) + " " + pad(d.getHours()) + ":" + pad(d.getMinutes());
+      const N = 48;
+      let d = new Date();
+      let html = "";
+      for (let i = 0; i < N; i++) {
+        html +=
+          '<div class="ac-feed-row">' +
+          '<span class="ac-feed-name">' + mask() + "</span>" +
+          '<span class="ac-feed-course">' + pick(courses) + "</span>" +
+          '<span class="ac-feed-time">' + fmt(d) + "</span>" +
+          '<span class="ac-feed-badge"><i></i>등록완료</span>' +
+          "</div>";
+        d = new Date(d.getTime() - (20 + Math.floor(Math.random() * 400)) * 60000);
+      }
+      track.innerHTML = html + html; // 이음새 없는 무한 루프용 복제
+      // 화면 밖이면 애니메이션 정지 (성능)
+      const fio = new IntersectionObserver((entries) => {
+        entries.forEach((e) => acFeed.classList.toggle("paused", !e.isIntersecting));
+      }, { threshold: 0 });
+      fio.observe(acFeed);
     }
-    function relabel() {
-      const ts = rowsEl.querySelectorAll(".ac-feed-time");
-      ts.forEach((t, i) => { t.textContent = times[i] || times[times.length - 1]; });
-    }
-    function addRow() {
-      const row = makeRow();
-      rowsEl.insertBefore(row, rowsEl.firstChild);
-      while (rowsEl.children.length > MAX) rowsEl.removeChild(rowsEl.lastChild);
-      relabel();
-      count += 1;
-      if (numEl) numEl.textContent = count;
-    }
-    // 초기 채우기 (등장 애니메이션 없이)
-    for (let i = 0; i < MAX; i++) {
-      const row = makeRow();
-      row.style.animation = "none";
-      rowsEl.appendChild(row);
-    }
-    relabel();
-    if (numEl) numEl.textContent = count;
-    let feedTimer = null;
-    const fio = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) { if (!feedTimer) feedTimer = setInterval(addRow, 2100); }
-        else if (feedTimer) { clearInterval(feedTimer); feedTimer = null; }
-      });
-    }, { threshold: 0.3 });
-    fio.observe(acFeed);
   }
 
   /* ---------- 6. CONTACT form ---------- */
